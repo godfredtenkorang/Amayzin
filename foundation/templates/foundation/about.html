@@ -1,0 +1,274 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazyn Grace Foundation Inc</title>
+    <!-- External CSS files, meta tags, and other head content can go here -->
+    <link rel="stylesheet" href="{% static 'foundation/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <!-- Your header content such as logo, navigation menu, etc. -->
+
+        <div class="top-navigation">
+            <!-- Column for contact information -->
+            <div class="top-nav-col">
+
+                <p>A 501(c)(3) non-profit charitable organization.</p>
+                <p><i class="fa fa-phone-volume"></i> 0558156844</p>
+                <p><i class="fa-solid fa-envelope"></i> example@gmail.com</p>
+            </div>
+            <!-- Column for social media icons -->
+            <div class="social-media">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="second-navigation">
+            <nav>
+                <!-- Company logo -->
+                <div class="company-logo">
+                    <a href="index.html">
+                        <img src="{% static 'foundation/img/company-logo.png' %}" alt="">
+                        <h3>Amazyn Grace <br> Foundation Inc</h3>
+                    </a>
+                </div>
+
+                <!-- Navigation links and donate button -->
+                <div class="links">
+                    <div class="nav">
+                        <!-- Navigation links -->
+                        <ul class="navigation-links">
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                            <li><a class="active" href="{% url 'about' %}">About Us</a></li>
+                            <li><a class="toggle" href="">Our Work <i class="fa fa-caret-down"></i> </a>
+                                <div class="sub-links">
+                                    <a href="">USA Projects</a>
+                                    <a href="">Ghana Project</a>
+                                </div>
+
+                                <i class="fa-solid fa-plus"></i>
+                            </li>
+                            <li><a class="toggle" href="">Media <i class="fa fa-caret-down"></i> </a>
+                                <div class="sub-links">
+                                    <a  href="{% url 'watch' %}">Videos</a>
+                                    <a href="{% url 'photos' %}">Gallery</a>
+                                    <a href="{% url 'news' %}">Blogs</a>
+                                </div>
+
+                                <i class="fa-solid fa-plus"></i>
+                            </li>
+                            <li><a href="{% url 'sponsorship' %}">Sponsorship</a></li>
+                            <li><a href="{% url 'getinvolve' %}">Get Involved</a></li>
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+
+                         
+
+                         
+
+                        </ul>
+                        <div class="remove-nav">
+                            <i class="fas fa-times"></i>
+
+                        </div>
+                        
+                    </div>
+
+                    <!-- Donate button -->
+                    <div class="donate-button">
+                        <li><a href=""><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate Now</a></li>
+                    </div>
+
+                    <!-- Menu icon -->
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+    </header>
+
+    <!-- Banner section -->
+    <div class="banner-section">
+        <!-- Banner image with alt attribute -->
+        <img src="{% static 'foundation/img/slideShow.jpg' %}" alt="Banner Image">
+        <div class="banner-text main">
+            <h1>About Us</h1>
+        </div>
+    </div>
+
+    <main>
+        <!-- Statement section -->
+        <section class="statement-section main">
+            <div class="statement">
+                <div class="statement-head">
+                    <h3>Vision Statement</h3>
+                </div>
+                <p>To create a brighter tomorrow and to put a smile on the faces of the orphaned and the less
+                    privileged.</p>
+            </div>
+            <div class="statement">
+                <div class="statement-head">
+                    <h3>Mission Statement</h3>
+                </div>
+                <p>To provide services, resources, opportunities, and assistance for orphans, the abused, and the less
+                    privileged by raising awareness of their challenges and sufferings.</p>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section class="about-section-container main">
+            <div class="about-section">
+                <div class="about-content">
+                    <div class="heading">
+                        <h2>Who we are</h2>
+                    </div>
+                    <div class="content-col">
+                        <p>The Amayzin Grace Foundation Intl Inc. was established by Grace Cece Ofosu, a compassionate
+                            and talented teacher, with the aim of creating a brighter future for the vulnerable, poor,
+                            and less-privileged individuals, particularly orphans and those who have been abused. Grace,
+                            the founder, was born in Ghana and raised in the United States, where she witnessed
+                            firsthand the challenges faced by orphans, abused individuals, and the less-privileged in
+                            accessing basic necessities such as food, education, and healthcare.</p>
+                    </div>
+                    <div class="content-col">
+                        <p>Determined to make a difference, Grace is committed to partnering with philanthropists and
+                            donors to bring attention to the needs of neglected individuals, especially orphans and
+                            vulnerable children. She firmly believes that through collaborative efforts with donors,
+                            opportunities can be created to provide basic education, shelter, and healthcare support to
+                            those in need, particularly in developing countries.</p>
+                    </div>
+                    <div class="content-col">
+                        <p>Grace's vision is rooted in the belief that investing in these individuals is not only an
+                            investment in their future but also in the world as a whole, as it paves the way for the
+                            potential growth of future doctors and other professionals.</p>
+                    </div>
+                    <!-- Donate button -->
+                    <div class="button">
+                        <li><a href=""><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate Now</a></li>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <!-- About image with alt attribute -->
+                    <img src="{% static 'foundation/img/image(2).jpg' %}" alt="About Image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Team section -->
+        <section class="team-seaction main">
+            <div class="founders-section">
+                <div class="heading">
+                    <h3>Founders</h3>
+                </div>
+                <div class="founders">
+                    <div class="founder">
+                        <img src="{% static 'foundation/img/founder.jpg' %}" alt="Founder Image">
+                        <div class="fouder-detail">
+                            <p>Grace Cece Ofosu</p>
+                            <p>CEO & FOUNDER</p>
+                        </div>
+                    </div>
+                    <div class="founder">
+                        <img src="{% static 'foundation/img/founder-2.jpg' %}" alt="Founder Image">
+                        <div class="fouder-detail">
+                            <p>Gideon Affum</p>
+                            <p>Director GHANA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="board-section">
+                <div class="heading">
+                    <h3>Board members</h3>
+                </div>
+                <div class="board-members">
+                    <div class="member">
+                        <img src="{% static 'foundation/img/team-2.jpg' %}" alt="Board Member Image">
+                        <div class="member-detail">
+                            <p>Judy Haleegoah</p>
+                            <p>Director/Secretary USA</p>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="{% static 'foundation/img/team.jpg' %}" alt="Board Member Image">
+                        <div class="member-detail">
+                            <p>George Kwakye</p>
+                            <p>Assistant Director/ P.R.O. GHANA</p>
+                        </div>
+                    </div>
+                    <div class="member">
+                        <img src="{% static 'foundation/img/team-3.jpg' %}" alt="Board Member Image">
+                        <div class="member-detail">
+                            <p>Seth Owusu Secretary</p>
+                            <p>Secretary/Media Man GHANA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="footer main">
+            <div class="footer-col width">
+                <div class="company-logo-footer">
+                    <!-- Company logo image with alt attribute -->
+                    <img src="{% static 'foundation/img/company-logo.png' %}" alt="Company Logo">
+                    <h2>Amazyn Grace Foundation Inc</h2>
+                </div>
+                <p>Be Rose International Foundation in Annapolis, Maryland, Nigeria, and Sierra Leone was started more
+                    than 8 years ago for children who needed humanitarian and medical assistance. The foundation has
+                    saved the lives of children, elderly, women, and people in need by giving them HOPE, humanitarian
+                    assistance, and helping them escape from poverty.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Contact Us</h5>
+                <p><span>Phone:</span> 0829384985 </p>
+                <p><span>Address:</span> 1125 West Street Suite 200 Annapolis, MD 21401</p>
+                <p><span>Email:</span> brif@beroseintfoundation.org</p>
+                <div class="social-medias">
+                    <!-- Social media links -->
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Useful Links</h5>
+                <!-- Footer navigation links -->
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Sponsorship</a></li>
+                <li><a href="">Get Involved</a></li>
+            </div>
+        </div>
+        <div class="copy-right-section">
+            <!-- Copyright information -->
+            <p>© 2024 Amazyn Grace Foundation All rights reserved. A 501(c)(3) non-profit charitable organization.</p>
+            <p>Developed by <a href="">GodeyTech</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts at the bottom of the body for faster page loading -->
+    <script src="{% static 'foundation/app.js' %}"></script>
+</body>
+
+</html>

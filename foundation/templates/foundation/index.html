@@ -1,0 +1,313 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <!-- External CSS files, meta tags, and other head elements can go here -->
+    <link rel="stylesheet" href="{% static 'foundation/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header>
+        <!-- Header section containing contact information, social media links, logo, and navigation menu -->
+        <div class="top-navigation">
+            <!-- Column for contact information -->
+            <div class="top-nav-col">
+
+                <p>A 501(c)(3) non-profit charitable organization.</p>
+                <p><i class="fa fa-phone-volume"></i> 0558156844</p>
+                <p><i class="fa-solid fa-envelope"></i> example@gmail.com</p>
+            </div>
+            <!-- Column for social media icons -->
+            <div class="social-media">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+
+               
+
+            </div>
+        </div>
+        <!-- Second navigation containing logo, navigation links, and donate button -->
+        <div class="second-navigation">
+            <nav>
+                <!-- Company logo -->
+                <div class="company-logo">
+                    <a href="index.html">
+                        <img src="{% static 'foundation/img/company-logo.png' %}" alt="company logo">
+                        <h2>Amazyn Grace <br> Foundation Inc</h2>
+                    </a>
+                </div>
+                <!-- Navigation links and donate button -->
+                <div class="links">
+                    <div class="nav">
+                        <!-- Navigation links -->
+                        <ul class="navigation-links">
+                            <li><a class="active" href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li><a class="toggle" href="">Our Work <i class="fa fa-caret-down"></i> </a>
+                                <div class="sub-links">
+                                    <a href="">USA Projects</a>
+                                    <a href="">Ghana Project</a>
+                                </div>
+                                <i class="fa-solid fa-plus"></i>
+                            </li>
+                            <li><a class="toggle" href="">Media <i class="fa fa-caret-down"></i> </a>
+                                <div class="sub-links">
+                                    <a  href="{% url 'watch' %}">Videos</a>
+                                    <a href="{% url 'photos' %}">Gallery</a>
+                                    <a href="{% url 'news' %}">Blogs</a>
+                                </div>
+                                <i class="fa-solid fa-plus"></i>
+                            </li>
+                            <li><a href="{% url 'sponsorship' %}">Sponsorship</a></li>
+                            <li><a href="{% url 'getinvolve' %}">Get Involved</a></li>
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+
+                        </ul>
+                        <div class="remove-nav">
+                            <i class="fas fa-times"></i>
+
+                        </div>
+                    </div>
+
+                    <!-- Donate button -->
+                    <div class="donate-button">
+                        <li><a href=""><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate Now</a></li>
+                    </div>
+
+                    <!-- Menu icon -->
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+
+
+
+    </header>
+    <!-- slide show section -->
+    <!-- Slide show section -->
+    <section class="slide-show">
+        <!-- Slide items with images and text -->
+        <div class="slide">
+            <!-- Image with alt text for SEO -->
+            <img src="{% static 'foundation/img/slideShow.jpg' %}" alt="Slide 1">
+            <div class="slid-show-text">
+                <!-- Title and description -->
+                <h1>Support Our Cause with Your Generosity!</h1>
+                <p>Your contribution can make a significant impact on our mission. By donating today</p>
+                <!-- Links -->
+                <div class="links-on-slide-show">
+                    <a href="">Our Work</a>
+                    <a href="">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <!-- Image with alt text for SEO -->
+            <img src="{% static 'foundation/img/slideShow-2.jpg' %}" alt="Slide 2">
+            <div class="slid-show-text">
+                <!-- Title and description -->
+                <h1>Support Our Cause with Your Generosity!</h1>
+                <p>Your contribution can make a significant impact on our mission. By donating today</p>
+                <!-- Links -->
+                <div class="links-on-slide-show">
+                    <a href="">Our Work</a>
+                    <a href="">Contact Us</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide show navigation buttons -->
+        <div class="slide-show-button">
+            <button class="prev"><i class="fa-solid fa-less-than"></i></button>
+            <button class="next"><i class="fa-solid fa-greater-than"></i></button>
+        </div>
+    </section>
+
+
+    <main>
+        <!-- about us -->
+        <section class="about-section-container main ">
+            <div class="about-section">
+
+                <div class="about-content element ">
+                    <div class="heading">
+                        <h2>Amazyn Grace Foundation Inc</h2>
+                    </div>
+                    </p>
+
+                    <div class="content-col">
+                        <h3>About Us</h3>
+
+                        <p>The Amayzin Grace Foundation Intl Inc. was established by Grace Cece Ofosu, a compassionate
+                            and
+                            talented teacher, with the aim of creating a brighter future for the vulnerable, poor, and
+                            less-privileged individuals, particularly orphans and those who have been abused. Grace, the
+                            founder, was born in Ghana and raised in the United States, where she witnessed firsthand
+                            the
+                            challenges faced by orphans, abused individuals, and the less-privileged in accessing basic
+                            necessities such as food, education, and healthcare.
+                        </p>
+                    </div>
+                    <div class="content-col">
+                        <p>Determined to make a difference, Grace is committed to partnering with philanthropists and
+                            donors
+                            to bring attention to the needs of neglected individuals, especially orphans and vulnerable
+                            children. She firmly believes that through collaborative efforts with donors, opportunities
+                            can
+                            be created to provide basic education, shelter, and healthcare support to those in need,
+                            particularly in developing countries.
+                        </p>
+                    </div>
+                    <div class="content-col">
+                        <p> Grace's vision is rooted in the belief that investing in these individuals is not only an
+                            investment in their future, but also in the world as a whole, as it paves the way for the
+                            potential growth of future doctors and other professionals.</p>
+                    </div>
+
+                    <div class="button">
+                        <li><a href=""><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate Now</a></li>
+                    </div>
+                </div>
+                <div class="about-img element">
+                    <img src="{% static 'foundation/img/image(2).jpg' %}" alt="about image">
+
+
+                </div>
+
+            </div>
+        </section>
+        <!-- about us end -->
+
+        <!-- sponsor a child -->
+        <section class="sponsor-a-child-section element main">
+
+            <div class="sponsor-a-child-content">
+                <h3>Sponsor a child or choose a birthday mate:
+                </h3>
+                <P>Transform a child’s life by sponsoring them. With your donation, we are able to ensure they grow up
+                    safe, healthy, educated, and happy. Your help, indeed, means the world to those in need. Contact us
+                    today in Maryland, United States, Sierra Leone and Nigeria to discover how to sponsor a child
+                    through BE ROSE INTERNATIONAL FOUNDATION. You can sponsor a child monthly, quarterly or annually.
+                    You can also find your birthday mate and choose to celebrate with that child. Contact us today
+                </P>
+                <div class="button">
+                    <li><a href=""> More Details</a></li>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- what we do section -->
+        <section class="what-we-do-section main">
+            <div class="we-do-heading">
+                <h5>What We do</h5>
+
+            </div>
+            <div class="we-do-container ">
+
+
+                <div class="what-we-do-col col-1 element">
+                    <h5>USA Projects</h5>
+                    <p> The foundation works diligently to provide emergency humanitarian assistance such as food,
+                        rental and utility assistance to low income communities in Anne Arundel County and the state of
+                        Maryland. Our diverse programs provides, motivates and empower young girls, to become empowered
+                        women and teaches self-esteem, youths in leadership training, entrepreneur skills, community
+                        building and providing medical knowledge and assistance to seniors and elderly in need</p>
+                    <div class="button">
+                        <li><a href=""> Read more</a></li>
+                    </div>
+                </div>
+                <div class="what-we-do-col col-2 element">
+                    <h5>Ghana Projects</h5>
+                    <p> School feeding, Scholarships to the girl child, and distribution of school supplies to under
+                        privileged children in Sierra Leone and promote education for girls. Our child trafficking and
+                        teenage runaway program give children that are kidnapped, and sold into slavery and sex industry
+                        a second chance and restore their dignity. Agriculture Business initiative teaches women
+                        especially widows how to do micro trading as well as well as Agribusiness. Our disaster
+                        management team works to be on the scene of disasters to provide immediate aid to those affected
+                        by fires and floods. The BE Rose Foster home provides sponsorship of foster and orphan children
+                        under the age of with a caring and safe place they can call Home.
+                    <div class="button">
+                        <li><a href=""> Read more</a></li>
+                    </div>
+                    </p>
+                </div>
+                
+            </div>
+        </section>
+
+
+
+    </main>
+
+    <!-- footer section -->
+    <footer>
+        <div class="footer main">
+            <div class="footer-col width">
+                <div class="company-logo-footer">
+
+                    <img src="{% static 'foundation/img/company-logo.png' %}" alt="">
+                    <h2>Amazyn Grace <br> Foundation Inc</h2>
+
+                </div>
+                <p>Be Rose International Foundation in Annapolis, Maryland, Nigeria and Sierra Leone was started more
+                    than 8 years ago for children who needed humanitarian and medical assistance. The foundation has
+                    saved the lives of children, elderly, women and people in need by giving them HOPE, humanitarian
+                    assistance and help them escape from poverty.</p>
+
+            </div>
+            <div class="footer-col">
+                <h5>Contact Us</h5>
+                <p><span>Phone : </span> <br> <br> 0829384985 </p>
+                <p><span>Address :</span><br> <br> 1125 West Street Suite 200 Annapolis, MD 21401
+                </p>
+                <p><span>Email:</span>: <br> <br> brif@beroseintfoundation.org
+                </p>
+                <div class="social-medias">
+                    <a href=""><i class="fa-brands fa-facebook"></i> </a>
+                    <a href=""> <i class="fa-brands fa-instagram"></i></a>
+                    <a href=""> <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Useful Links</h5>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Sponsorship</a></li>
+                <li><a href="">Get Involved</a></li>
+            </div>
+        </div>
+        <div class="copy-right-section">
+            <p>© 2024 Amazyn Grace Foundation All rights reserved. A 501(c)(3) non-profit charitable organization.
+            <p>Developy by <a href="">GodeyTech</a></p>
+            </p>
+
+        </div>
+    </footer>
+
+
+    <!-- Scripts at the bottom of the body for faster page loading -->
+    <script src="{% static 'foundation/app.js' %}"></script>
+</body>
+
+</html>

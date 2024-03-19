@@ -1,0 +1,547 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazyn Grace Foundation Inc</title>
+    <!-- External CSS files, meta tags, and other head content can go here -->
+    <link rel="stylesheet" href="{% static 'foundation/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="...">
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <!-- Your header content such as logo, navigation menu, etc. -->
+
+        <div class="top-navigation">
+            <!-- Column for contact information -->
+            <div class="top-nav-col">
+
+                <p>A 501(c)(3) non-profit charitable organization.</p>
+                <p><i class="fa fa-phone-volume"></i> 0558156844</p>
+                <p><i class="fa-solid fa-envelope"></i> example@gmail.com</p>
+            </div>
+            <!-- Column for social media icons -->
+            <div class="social-media">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="second-navigation">
+            <nav>
+                <!-- Company logo -->
+                <div class="company-logo">
+                    <a href="index.html">
+                        <img src="{% static 'foundation/img/company-logo.png' %}" alt="">
+                        <h3>Amazyn Grace <br> Foundation Inc</h3>
+                    </a>
+                </div>
+
+                <!-- Navigation links and donate button -->
+                <div class="links">
+                    <div class="nav">
+                        <!-- Navigation links -->
+                        <ul class="navigation-links">
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li><a class="toggle" href="">Our Work <i class="fa fa-caret-down"></i> </a>
+                                <div class="sub-links">
+                                    <a href="">USA Projects</a>
+                                    <a href="">Ghana Project</a>
+                                </div>
+
+                                <i class="fa-solid fa-plus"></i>
+                            </li>
+                            <li><a class="toggle" href="">Media <i class="fa fa-caret-down"></i> </a>
+                                <div class="sub-links">
+                                    <a  href="{% url 'watch' %}">Videos</a>
+                                    <a href="{% url 'photos' %}">Gallery</a>
+                                    <a href="{% url 'news' %}">Blogs</a>
+                                </div>
+
+                                <i class="fa-solid fa-plus"></i>
+                            </li>
+                            <li><a href="{% url 'sponsorship' %}">Sponsorship</a></li>
+                            <li><a class="active" href="{% url 'getinvolve' %}">Get Involved</a></li>
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+
+
+
+
+
+                        </ul>
+                        <div class="remove-nav">
+                            <i class="fas fa-times"></i>
+
+                        </div>
+                    </div>
+
+                    <!-- Donate button -->
+                    <div class="donate-button">
+                        <li><a href=""><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate Now</a></li>
+                    </div>
+
+                    <!-- Menu icon -->
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+    </header>
+
+    <!-- Banner section -->
+    <div class="banner-section">
+        <!-- Banner image with alt attribute -->
+        <img src="{% static 'foundation/img/slideShow.jpg' %}" alt="Banner Image">
+        <div class="banner-text main">
+            <h1>Get Involved</h1>
+        </div>
+    </div>
+
+
+
+
+    <main>
+        <!-- time -->
+        <section class="time-section main">
+            <div class="time">
+                <img src="{% static 'foundation/img/time.JPG' %}" alt="">
+
+            </div>
+            <div class="time-content">
+                <h2> Volunteering: the joy of selfless service
+                </h2>
+
+                <p> Every act of kindness, no matter how small, makes a difference.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- values -->
+        <section class="values-section">
+            <p>Please consider the value of your contribution in any of the following areas:
+            </p>
+            <div class="values-container">
+                <div class="values">
+                    <i class="fa-solid fa-sheet-plastic"></i>
+                    <h4>Programs</h4>
+                    <p> Assist with organizing activities for children and families at community events, including event
+                        set up and take down, as well as any other necessary tasks
+                        .</p>
+                </div>
+                <div class="values">
+                    <i class="fa-solid fa-handshake"></i>
+                    <h4>Outreach</h4>
+                    <p> Raise awareness and fundraising experience in schools, markets, and other community settings.
+                    </p>
+                </div>
+                <div class="values">
+                    <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                    <h4>Marketing & Publicity</h4>
+                    <p> Help with activities for children and families at community events. This could also include set
+                        up and take down for the event and additional tasks as needed.</p>
+                </div>
+                <div class="values">
+                    <i class="fa-solid fa-money-bill-trend-up"></i>
+                    <h4>Finance & Development</h4>
+                    <p> Help with activities for children and families at community events. This could also include set
+                        up and take down for the event and additional tasks as needed.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="slider-containers">
+            <div class="sliders">
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(2).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(3).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(4).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(5).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(6).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(2).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(3).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(6).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(2).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(3).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+
+
+
+
+            </div>
+            <button class="prev-btn">Prev</button>
+            <button class="next-btn">Next</button>
+        </div>
+        <!-- pop up -->
+        <div class="popupImage" id="popupImage">
+            <img src="" alt="" id="pop-up-img" onclick="hidePopup()">
+        </div>
+
+        <!-- volunteer application form -->
+        <section class="volunteer-application-section main">
+            <p> Be Rose International Volunteer Application - Ages 18 and up
+            </p>
+            <form method="POST">
+                {% csrf_token %}
+                <!-- First Name and Last Name -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="first_name">First Name *</label> <br>
+                            <input type="text" name="first_name" id="first_name" placeholder="Enter your first name"
+                                required>
+                        </div>
+                        <div class="input">
+                            <label for="last_name">Last Name *</label> <br>
+                            <input type="text" name="last_name" id="last_name" placeholder="Enter your last name"
+                                required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Address and Contact Number -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="email">Email Address *</label> <br>
+                            <input type="email" name="email" id="email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="input">
+
+                            <div class="select-box input">
+                                <label for="">Phone Number</label>
+                                <div class="selected-option">
+                                    <div>
+                                        <span class="iconify" data-icon="flag:gb-4x3"></span>
+                                        <strong>+44</strong>
+                                    </div>
+                                    <input type="tel" name="phone" placeholder="Phone Number">
+                                </div>
+                                <div class="options">
+                                    <input type="text" class="search-box" placeholder="Search Country Name">
+
+                                    <ol>
+
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="address">Address *</label> <br>
+                            <input type="text" name="address" id="address" placeholder="Enter your address" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- City, State, and Zip Code -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="city">City</label> <br>
+                            <input type="text" name="city" id="city" placeholder="Enter your city">
+                        </div>
+                        <div class="input">
+                            <label for="state">States</label> <br>
+                            <input type="text" name="states" id="state" placeholder="Enter your state">
+                        </div>
+                        <div class="input">
+                            <label for="zip_code">Zip Code *</label> <br>
+                            <input type="text" name="zipcode" id="zip_code" placeholder="Enter your zip code" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volunteer Position -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="volunteer_position">What volunteer position interests you? *</label> <br>
+                            <input type="text" name="volunteer_position" id="volunteer_position"
+                                placeholder="Enter your volunteer position" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work and Volunteer Experience -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="work_experience">Please describe related work and volunteer experience *</label>
+                            <br>
+                            <textarea name="volunteer_experience" id="work_experience"
+                                placeholder="Enter your work and volunteer experience" required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hobbies, Special Interests, and Skills -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="hobbies_skills">What are your hobbies, special interests, and skills? *</label>
+                            <br>
+                            <input type="text" name="volunteer_skills" id="hobbies_skills"
+                                placeholder="Enter your hobbies, interests, and skills" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Training and Degrees -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="training_degrees">What related training and degrees have you received? *</label>
+                            <input type="text" name="training_and_decrees_received" id="training_degrees"
+                                placeholder="Enter your related training and degrees" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Reason for Volunteering -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="main_reason">What is your main reason for wanting to volunteer with us?</label>
+                            <br>
+                            <textarea name="reason_for_volunteer" id="main_reason"
+                                placeholder="Enter your main reason for volunteering"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- References -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="references">Please list three people (non-relatives) as references of your
+                                skills, talents, and reliability. Please include the nature of your relationship and
+                                phone number.</label> <br>
+                            <textarea name="references" id="references" placeholder="Enter your references"
+                                required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Availability -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="availability">Please include date and time you are available *</label> <br>
+                            <input type="text" name="datetime_available" id="availability"
+                                placeholder="Enter your availability" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="emergency_contact">Whom should we contact in case of emergency? *</label> <br>
+                            <input type="text" name="emergency_contact" id="emergency_contact"
+                                placeholder="Enter your emergency contact" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Criminal Convictions -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="criminal_convictions">Maryland law requires that we ask you to provide
+                                information about any criminal conviction that you have. If you have no convictions,
+                                please write none.</label> <br>
+                            <input type="text" name="criminal_conviction" id="criminal_convictions"
+                                placeholder="Enter your criminal convictions" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Swear Information -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="swear">I swear that information on this application is true *</label>
+                            <input type="text" name="verified" id="swear" placeholder="YES/NO" required>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Signature and Date -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="signature">Your signature *</label> <br>
+                            <input type="text" name="signature" id="signature" placeholder="Enter your signature" required>
+                        </div>
+                        <div class="input">
+                            <label for="date">Date *</label> <br>
+                            <input type="date" name="date" id="date" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message / Comments -->
+                <div class="forms">
+                    <div class="form-input">
+                        <div class="input">
+                            <label for="comments">Message / Comments</label> <br>
+                            <textarea name="message" id="comments" placeholder="Enter your message or comments"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer section -->
+    <footer>
+        <div class="footer main">
+            <div class="footer-col width">
+                <div class="company-logo-footer">
+
+                    <img src="{% static 'foundation/img/company-logo.png' %}" alt="">
+                    <h2>Amazyn Grace <br> Foundation Inc</h2>
+
+                </div>
+                <p>Be Rose International Foundation in Annapolis, Maryland, Nigeria and Sierra Leone was started more
+                    than 8 years ago for children who needed humanitarian and medical assistance. The foundation has
+                    saved the lives of children, elderly, women and people in need by giving them HOPE, humanitarian
+                    assistance and help them escape from poverty.</p>
+
+            </div>
+            <div class="footer-col">
+                <h5>Contact Us</h5>
+                <p><span>Phone : </span> <br> <br> 0829384985 </p>
+                <p><span>Address :</span><br> <br> 1125 West Street Suite 200 Annapolis, MD 21401
+                </p>
+                <p><span>Email:</span>: <br> <br> brif@beroseintfoundation.org
+                </p>
+                <div class="social-medias">
+                    <a href=""><i class="fa-brands fa-facebook"></i> </a>
+                    <a href=""> <i class="fa-brands fa-instagram"></i></a>
+                    <a href=""> <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Useful Links</h5>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Sponsorship</a></li>
+                <li><a href="">Get Involved</a></li>
+            </div>
+        </div>
+        <div class="copy-right-section">
+            <p>© 2024 Amazyn Grace Foundation All rights reserved. A 501(c)(3) non-profit charitable organization.
+            <p>Developy by <a href="">GodeyTech</a></p>
+            </p>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Scripts at the bottom of the body for faster page loading -->
+    <script src="{% static 'foundation/app.js' %}"></script>
+    <script src="{% static 'foundation/country.js' %}"></script>
+    <script src="{% static 'foundation/script.js' %}"></script>
+</body>
+
+</html>

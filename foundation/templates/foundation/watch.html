@@ -1,0 +1,192 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <!-- External CSS files, meta tags, and other head s can go here -->
+    <link rel="stylesheet" href="{% static 'foundation/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <!-- Your header content such as logo, navigation menu, etc. -->
+
+        <div class="top-navigation">
+            <!-- Column for contact information -->
+            <div class="top-nav-col">
+
+                <p>A 501(c)(3) non-profit charitable organization.</p>
+                <p><i class="fa fa-phone-volume"></i> 0558156844</p>
+                <p><i class="fa-solid fa-envelope"></i> example@gmail.com</p>
+            </div>
+            <!-- Column for social media icons -->
+            <div class="social-media">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="second-navigation">
+            <nav>
+                <!-- Company logo -->
+                <div class="company-logo">
+                    <a href="index.html">
+                        <img src="{% static 'foundation/img/company-logo.png' %}" alt="">
+                        <h3>Amazyn Grace <br> Foundation Inc</h3>
+                    </a>
+                </div>
+
+                <!-- Navigation links and donate button -->
+                <div class="links">
+                    <div class="nav">
+                        <!-- Navigation links -->
+                        <ul class="navigation-links">
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li><a class="toggle" href="">Our Work <i class="fa fa-caret-down"></i> </a>
+                                <div class="sub-links">
+                                    <a href="">USA Projects</a>
+                                    <a href="">Ghana Project</a>
+                                </div>
+                                <i class="fa-solid fa-plus"></i>
+                            </li>
+                            <li><a class="active" class="toggle" href="">Media <i class="fa fa-caret-down"></i> </a>
+                                <div class="sub-links">
+                                    <a href="{% url 'watch' %}">Videos</a>
+                                    <a href="{% url 'photos' %}">Gallery</a>
+                                    <a href="{% url 'news' %}">Blogs</a>
+                                </div>
+
+                                <i class="fa-solid fa-plus"></i>
+                            </li>
+                            <li><a href="{% url 'sponsorship' %}">Sponsorship</a></li>
+                            <li><a href="{% url 'getinvolve' %}">Get Involved</a></li>
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+
+
+
+
+                        </ul>
+                        <div class="remove-nav">
+                            <i class="fas fa-times"></i>
+
+                        </div>
+                    </div>
+
+                    <!-- Donate button -->
+                    <div class="donate-button">
+                        <li><a href=""><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate Now</a></li>
+                    </div>
+
+                    <!-- Menu icon -->
+                    <div class="menu-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+    </header>
+
+
+    <!-- banner -->
+    <div class="banner-section">
+        <img src="{% static 'foundation/img/slideShow.jpg' %}" alt="">
+        <div class="banner-text main">
+            <h1>Watch</h1>
+        </div>
+    </div>
+
+
+    <main>
+        <section class="watch-us-section main">
+            {% for video in videos %}
+            <div class="watch">
+                <iframe src="{{ video.url }}" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+            {% endfor %}
+        </section>
+    </main>
+
+
+
+
+    <!-- footer section -->
+    <footer>
+        <div class="footer main">
+            <div class="footer-col width">
+                <div class="company-logo-footer">
+
+                    <img src="{% static 'foundation/img/company-logo.png' %}" alt="">
+                    <h2>Amazyn Grace <br> Foundation Inc</h2>
+
+                </div>
+                <p>Be Rose International Foundation in Annapolis, Maryland, Nigeria and Sierra Leone was started more
+                    than 8 years ago for children who needed humanitarian and medical assistance. The foundation has
+                    saved the lives of children, elderly, women and people in need by giving them HOPE, humanitarian
+                    assistance and help them escape from poverty.</p>
+
+            </div>
+            <div class="footer-col">
+                <h5>Contact Us</h5>
+                <p><span>Phone : </span> <br> <br> 0829384985 </p>
+                <p><span>Address :</span><br> <br> 1125 West Street Suite 200 Annapolis, MD 21401
+                </p>
+                <p><span>Email:</span>: <br> <br> brif@beroseintfoundation.org
+                </p>
+                <div class="social-medias">
+                    <a href=""><i class="fa-brands fa-facebook"></i> </a>
+                    <a href=""> <i class="fa-brands fa-instagram"></i></a>
+                    <a href=""> <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Useful Links</h5>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Sponsorship</a></li>
+                <li><a href="">Get Involved</a></li>
+            </div>
+        </div>
+        <div class="copy-right-section">
+            <p>© 2024 Amazyn Grace Foundation All rights reserved. A 501(c)(3) non-profit charitable organization.
+            <p>Developy by <a href="">GodeyTech</a></p>
+            </p>
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Scripts at the bottom of the body for faster page loading -->
+    <script src="{% static 'foundation/app.js' %}"></script>
+</body>
+
+</html>
