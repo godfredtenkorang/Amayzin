@@ -1,0 +1,84 @@
+{% extends 'foundation/base.html' %}
+{% load static %}
+{% block content %}
+
+    <main>
+        <!-- Banner section -->
+        <div class="banner-section">
+            <!-- Banner image with alt attribute -->
+            <img src="{% static 'foundation/img/slideShow.jpg' %}" alt="Banner Image">
+            <div class="banner-text main">
+                <h1>Donate to save lives</h1>
+            </div>
+        </div>
+        <!-- Contact form section -->
+        <section class="donate-section main">
+            <form method="">
+              <div class="donate-input">
+                <label for="">Name</label> <br>
+                <input type="text" required  autocomplete="on">
+              </div>
+              <div class="donate-input">
+                <label for="">Email</label> <br>
+                <input type="email" autocomplete="on">
+              </div>
+              <div class="donate-input">
+                <label for="">Amount</label> <br>
+                <input type="number" required autocomplete="on">
+              </div>
+              <div class="donate-input">
+                <label for="">Phone</label> <br>
+                <input type="tel" required autocomplete="on">
+              </div>
+              <div class="donate-input">
+                <label for="">Country</label> <br>
+                <input type="text" required autocomplete="on">
+              </div>
+              <button>Donate</button>
+               
+            </form>
+            <!-- Image in the contact form with alt attribute -->
+            <div class="donate-form-img">
+                <img src="{% static 'foundation/img/donate.jpg' %}" alt="Contact Form Image">
+            </div>
+        </section>
+
+
+
+        <!-- Contact form section -->
+        <section class="donate-section main">
+ <!-- Image in the contact form with alt attribute -->
+ <div class="donate-form-img">
+  <img src="{% static 'foundation/img/donate.jpg' %}" alt="Contact Form Image">
+</div>
+
+            <form method="">
+              <div class="donate-input">
+                <label for="">Name</label> <br>
+                <input type="text" required  autocomplete="on">
+              </div>
+              <div class="donate-input">
+                <label for="">Email</label> <br>
+                <input type="email" autocomplete="on">
+              </div>
+              <div class="donate-input">
+                <label for="">Amount</label> <br>
+                <input type="number" required autocomplete="on">
+              </div>
+              <div class="donate-input">
+                <label for="">Phone</label> <br>
+                <input type="tel" required autocomplete="on">
+              </div>
+              <div class="donate-input">
+                <label for="">Country</label> <br>
+                <input type="text" required autocomplete="on">
+              </div>
+              <button>Donate</button>
+               
+            </form>
+           
+        </section>
+    </main>
+   <!-- Footer section -->
+ 
+   {% endblock content %}

@@ -1,137 +1,198 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'foundation/style.css' %}">
+    <title>Your Website Title</title>
 
+
+    <!-- Primary Meta Tags -->
+    <title>Amazyn Grace Foundation Inc - Empowering Lives, Building Hope</title>
+    <meta name="description"
+        content="Amazyn Grace Foundation Inc is a non-profit organization dedicated to empowering vulnerable individuals, providing humanitarian assistance, and fostering hope. Join us in our mission to make a positive impact on the world.">
+    <meta name="keywords"
+        content="Amazyn Grace Foundation Inc, non-profit, charity, humanitarian, empowerment, hope, donate, sponsor, volunteer">
+    <meta name="author" content="Amazyn Grace Foundation Inc">
+
+    <!-- Open Graph / Facebook -->
+
+    <meta property="og:title" content="Amazyn Grace Foundation Inc - Empowering Lives, Building Hope">
+    <meta property="og:description"
+        content="Amazyn Grace Foundation Inc is a non-profit organization dedicated to empowering vulnerable individuals, providing humanitarian assistance, and fostering hope. Join us in our mission to make a positive impact on the world.">
+    <meta property="og:image" content="{% static 'foundation/img/og-image.jpg' %}">
+
+    <!-- Twitter -->
+
+    <meta property="twitter:title" content="Amazyn Grace Foundation Inc - Empowering Lives, Building Hope">
+    <meta property="twitter:description"
+        content="Amazyn Grace Foundation Inc is a non-profit organization dedicated to empowering vulnerable individuals, providing humanitarian assistance, and fostering hope. Join us in our mission to make a positive impact on the world.">
+    <meta property="twitter:image" content="{% static 'foundation/img/twitter-image.jpg' %}">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'foundation/img/company-logo.png' %}" type="image/x-icon">
+
+
+    <!-- External CSS files, meta tags, and other head elements can go here -->
     <link rel="stylesheet" href="{% static 'foundation/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Amayzin Grace Foundation Intl.</title>
 </head>
+
 <body>
+
     <header>
-        <!-- Your header content such as logo, navigation menu, etc. -->
-    
+        <!-- Header section containing contact information, social media links, logo, and navigation menu -->
         <div class="top-navigation">
             <!-- Column for contact information -->
             <div class="top-nav-col">
-    
+
                 <p>A 501(c)(3) non-profit charitable organization.</p>
-                <p><i class="fa fa-phone-volume"></i> 0558156844</p>
-                <p><i class="fa-solid fa-envelope"></i> example@gmail.com</p>
+                <p><i class="fa fa-phone-volume"></i> 1-518-818-7832</p>
+                <p><i class="fa-solid fa-envelope"></i> amazingg2018@yahoo.com</p>
             </div>
             <!-- Column for social media icons -->
             <div class="social-media">
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://web.facebook.com/amayzingracefdnint"><i class="fa-brands fa-facebook"></i></a>
                 <a href=""><i class="fa-brands fa-twitter"></i></a>
                 <a href=""><i class="fa-brands fa-tiktok"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.instagram.com/amayzingracefdn?igsh=MWt4NWUwaTlrMTNlYw=="><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@amayzingracefoundationintl3712"><i
+                        class="fa-brands fa-youtube"></i></a>
+
+
+
             </div>
         </div>
+        <!-- Second navigation containing logo, navigation links, and donate button -->
         <div class="second-navigation">
             <nav>
                 <!-- Company logo -->
                 <div class="company-logo">
-                    <a href="index.html">
-                        <img src="{% static 'foundation/img/company-logo.png' %}" alt="">
-                        <h3>Amazyn Grace <br> Foundation Inc</h3>
+                    <a href="{% url 'index' %}">
+                        <img src="{% static 'foundation/img/company-logo.png' %}" alt="company logo">
+                        <h3>Amayzin Grace <br> Foundation Inc</h3>
                     </a>
                 </div>
-    
                 <!-- Navigation links and donate button -->
                 <div class="links">
                     <div class="nav">
                         <!-- Navigation links -->
                         <ul class="navigation-links">
-                            <li><a class="active" href="{% url 'index' %}">Home</a></li>
-                            <li><a href="{% url 'about' %}">About Us</a></li>
-                            <li><a href="">Our Work</a></li>
-                            <li><a href="">Media</a></li>
+                            <li><a href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a class="toggle" href="">Project<i class="fa fa-caret-down"></i> </a>
+                                <div class="sub-links">
+                                    <a href="{% url 'usaproject' %}">USA Projects</a>
+                                    <a href="{% url 'ghanaproject' %}">Ghana Project</a>
+                                </div>
+                                <i class="fa-solid fa-plus"></i>
+                            </li>
+                            <li><a class="toggle" href="">Media <i class="fa fa-caret-down"></i> </a>
+                                <div class="sub-links">
+                                    <a href="{% url 'watch' %}">Videos</a>
+                                    <a href="{% url 'photos' %}">Gallery</a>
+                                    <a href="{% url 'news' %}">Blogs</a>
+                                </div>
+                                <i class="fa-solid fa-plus"></i>
+                            </li>
                             <li><a href="{% url 'sponsorship' %}">Sponsorship</a></li>
-                            <li><a href="">Get Involved</a></li>
-                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
-    
-                            <div class="remove-nav">
-                                <i class="fas fa-times"></i>
-    
-                            </div>
+                            <li><a href="{% url 'getinvolve' %}">Get Involved</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+
                         </ul>
+                        <div class="remove-nav">
+                            <i class="fas fa-times"></i>
+
+                        </div>
                     </div>
-    
+
                     <!-- Donate button -->
                     <div class="donate-button">
-                        <li><a href=""><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate Now</a></li>
+                        <li><a href="{% url 'donate' %}"><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate
+                                Now</a></li>
                     </div>
-    
+
                     <!-- Menu icon -->
                     <div class="menu-icon">
                         <i class="fa-solid fa-bars"></i>
                     </div>
                 </div>
             </nav>
+
         </div>
-    
-    
-    
+
+
+
     </header>
     {% block content %} {% endblock %}
-<!-- footer section -->
-<footer>
-    <div class="footer main">
-        <div class="footer-col width">
-            <div class="company-logo-footer">
+    <!-- footer section -->
 
-                <img src="{% static 'foundation/img/company-logo.png' %}" alt="">
-                <h2>Amazyn Grace <br> Foundation Inc</h2>
+    <button id="scrollToTopBtn" title="click to scroll to top"><i class="fa fa-arrow-up"></i>
+    </button>
+    <footer>
+        <div class="footer main">
+            <div class="footer-col width">
+                <div class="company-logo-footer">
+
+                    <img src="{% static 'foundation/img/company-logo.png' %}" alt="">
+                    <h2>Amazyn Grace <br> Foundation Inc</h2>
+
+                </div>
+                <p>The Amayzin Grace Foundation Intl Inc., founded by Grace Cece Ofosu, aims to uplift vulnerable
+                    individuals, particularly orphans and abuse survivors. Through partnerships with philanthropists,
+                    Grace seeks to provide essential education, shelter, and healthcare, believing in the transformative
+                    impact on both individuals and global communities.</p>
 
             </div>
-            <p>Be Rose International Foundation in Annapolis, Maryland, Nigeria and Sierra Leone was started more than 8
-                years ago for children who needed humanitarian and medical assistance. The foundation has saved the
-                lives of children, elderly, women and people in need by giving them HOPE, humanitarian assistance and
-                help them escape from poverty.</p>
+            <div class="footer-col">
+                <h5>Contact Us</h5>
+                <p><span>Phone : </span> <br> <br> 1-518-818-7832 </p>
+                <p><span>Address :</span><br> <br> 1125 West Street Suite 200 Annapolis, MD 21401
+                </p>
+                <p><span>Email:</span>: <br> <br> amazingg2018@yahoo.com
+                </p>
+                <div class="social-medias">
+                    <a href="https://web.facebook.com/amayzingracefdnint"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/amayzingracefdn?igsh=MWt4NWUwaTlrMTNlYw=="><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@amayzingracefoundationintl3712"><i
+                            class="fa-brands fa-youtube"></i></a>
 
-        </div>
-        <div class="footer-col">
-            <h5>Contact Us</h5>
-            <p><span>Phone : </span> <br> <br> 0829384985 </p>
-            <p><span>Address :</span><br> <br> 1125 West Street Suite 200 Annapolis, MD 21401
-            </p>
-            <p><span>Email:</span>: <br> <br> brif@beroseintfoundation.org
-            </p>
-            <div class="social-medias">
-                <a href=""><i class="fa-brands fa-facebook"></i> </a>
-                <a href=""> <i class="fa-brands fa-instagram"></i></a>
-                <a href=""> <i class="fa-brands fa-tiktok"></i>
-                </a>
-                <a href="">
-                    <i class="fa-brands fa-twitter"></i>
-
-                </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Useful Links</h5>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'sponsorship' %}">Sponsorship</a></li>
+                <li><a href="{% url 'getinvolve' %}">Get Involved</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+                <li> <a href="{% url 'watch' %}">Videos</a></li>
+                <li> <a href="{% url 'photos' %}">Gallery</a>
+                </li>
+                <li> <a href="{% url 'news' %}">Blogs</a>
+                </li>
             </div>
         </div>
-        <div class="footer-col">
-            <h5>Useful Links</h5>
-            <li><a href="">Home</a></li>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Sponsorship</a></li>
-            <li><a href="">Get Involved</a></li>
-        </div>
-    </div>
-    <div class="copy-right-section">
-        <p>© 2024 Amazyn Grace Foundation All rights reserved. A 501(c)(3) non-profit charitable organization.
-        <p>Developy by <a href="">GodeyTech</a></p>
-        </p>
+        <div class="copy-right-section">
+            <p>© 2024 Amazyn Grace Foundation All rights reserved.
+            <p>Developy by <a href="">GodeyTech</a></p>
+            </p>
 
-    </div>
-</footer>
-    <script src="{% static 'foundation/app.js' %}"></script>
+        </div>
+    </footer>
+    <!-- Scripts at the bottom of the body for faster page loading -->
+    <script src="{% static 'foundation/alert.js' %}" defer></script>
+    <script src="{% static 'foundation/app.js' %}" defer></script>
+    <script src="{% static 'foundation/country.js' %}" defer></script>
+    <script src="{% static 'foundation/script.js' %}" defer></script>
+    <script src="https://getchat.app/assets/js/min/getchatapp.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -141,5 +202,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
 </body>
+
 </html>

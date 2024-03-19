@@ -1,5 +1,6 @@
 // Prevent default action for toggle links
-const preventLi = document.querySelectorAll(".toggle");
+function handleSubLinks(){
+    const preventLi = document.querySelectorAll(".toggle");
 preventLi.forEach((link) => {
     link.addEventListener("click", (e) => {
         e.preventDefault();
@@ -24,60 +25,67 @@ toggleLinks.forEach((toggleLink) => {
         }
     });
 });
+}
+handleSubLinks()
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const photos = document.querySelectorAll('.photo img');
-    const popUpImage = document.getElementById('popUpImage');
-    const popUpContainer = document.querySelector('.gallery-pop-up-container');
-    const prevButton = document.getElementById('prevButton');
-    const nextButton = document.getElementById('nextButton');
-    const removepopUpImage = document.getElementById("remove-popUp")
-    const zoomButton = document.getElementById("zoomButton")
-    let currentIndex = 0;
+function handlePopUpImage(){
 
-    // Function to display image in the pop-up container
-    function displayImage(index) {
-        popUpImage.src = photos[index].src;
-        currentIndex = index;
-    }
-
-    // Event listener for clicking on a photo to show it in the pop-up container
-    photos.forEach(function (photo, index) {
-        photo.addEventListener('click', function () {
-            displayImage(index);
-            popUpContainer.style.display = 'block';
+    document.addEventListener("DOMContentLoaded", function () {
+        const photos = document.querySelectorAll('.photo img');
+        const popUpImage = document.getElementById('popUpImage');
+        const popUpContainer = document.querySelector('.gallery-pop-up-container');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const removepopUpImage = document.getElementById("remove-popUp")
+        const zoomButton = document.getElementById("zoomButton")
+        let currentIndex = 0;
+    
+        // Function to display image in the pop-up container
+        function displayImage(index) {
+            popUpImage.src = photos[index].src;
+            currentIndex = index;
+        }
+    
+        // Event listener for clicking on a photo to show it in the pop-up container
+        photos.forEach(function (photo, index) {
+            photo.addEventListener('click', function () {
+                displayImage(index);
+                popUpContainer.style.display = 'block';
+            });
         });
-    });
-
-    // Event listeners for previous and next buttons
-    prevButton.addEventListener('click', function () {
-        currentIndex = (currentIndex - 1 + photos.length) % photos.length;
-        displayImage(currentIndex);
-    });
-
-    nextButton.addEventListener('click', function () {
-        currentIndex = (currentIndex + 1) % photos.length;
-        displayImage(currentIndex);
+    
+        // Event listeners for previous and next buttons
+        prevButton.addEventListener('click', function () {
+            currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+            displayImage(currentIndex);
+        });
+    
+        nextButton.addEventListener('click', function () {
+            currentIndex = (currentIndex + 1) % photos.length;
+            displayImage(currentIndex);
+        });
+        
+        zoomButton.addEventListener("click", () => {
+            popUpImage.classList.toggle("zooms");
+        });
+    
+        // Close pop-up container 
+        removepopUpImage.addEventListener("click", () => {
+            popUpContainer.style.display = "none";
+            popUpImage.classList.remove("zooms"); // Remove zoom class when closing
+        });
+    
+        
     });
     
-    zoomButton.addEventListener("click", () => {
-        popUpImage.classList.toggle("zooms");
-    });
-
-    // Close pop-up container 
-    removepopUpImage.addEventListener("click", () => {
-        popUpContainer.style.display = "none";
-        popUpImage.classList.remove("zooms"); // Remove zoom class when closing
-    });
-
     
-});
+}
+handlePopUpImage()
 
 
-
-
-// This event listener manages the fixed navigation bar on scroll
+ function handleStickyNav(){
+    // This event listener manages the fixed navigation bar on scroll
 window.addEventListener('scroll', function() {
     // Select the .second-navigation element
     const secondnavigation  = document.querySelectorAll(".second-navigation")
@@ -98,11 +106,17 @@ window.addEventListener('scroll', function() {
         }
     })
 });
+ }
+ handleStickyNav()
+
+
+
+ function handleToggleNav(){
 
 // This block of code handles the navigation functionality
 const navigationlinks = document.querySelector(".nav")
 const removeNav = document.querySelector(".remove-nav")
-const menuIcon = document.querySelector(".fa-bars")
+const menuIcon = document.querySelector(".menu-icon")
 
 // Event listener for the menu icon to toggle navigation links visibility
 menuIcon.addEventListener("click",()=>{
@@ -113,6 +127,13 @@ menuIcon.addEventListener("click",()=>{
 removeNav.addEventListener("click",()=>{
     navigationlinks.classList.toggle("show")
 })
+
+ }
+handleToggleNav()
+
+
+
+function handleImageSlider(){
 
 // This block of code manages the slide show functionality
 const slides = document.querySelectorAll('.slide-show .slide');
@@ -155,6 +176,11 @@ document.querySelector(".prev").addEventListener("click", prevSlide);
 document.querySelector(".next").addEventListener("click", nextSlide);
 setInterval(nextSlide, 7000);
 
+}
+handleImageSlider()
+
+function handleAnimationScroll(){
+
 // This block of code handles the reveal animation for elements on scroll
 window.addEventListener("scroll", () => {
     const targetElements = document.querySelectorAll(".element");
@@ -170,6 +196,8 @@ window.addEventListener("scroll", () => {
     });
 });
 
+}
+handleAnimationScroll()
 
 
 
