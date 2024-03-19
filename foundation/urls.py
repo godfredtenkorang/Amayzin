@@ -13,5 +13,8 @@ urlpatterns = [
     path('news_detail/<slug:news_slug>/', views.detail, name='detail'),
     path('photos', views.photos, name='photos'),
     path('galleryDetail/', views.galleryDetail, name='galleryDetail'),
+     path('usaproject', views.usaproject, name='usaproject'),
+  path('ghanaproject', views.ghanaproject, name='ghanaproject'),
+  path('donate', views.donate, name='donate'),
 ]
 

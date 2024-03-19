@@ -1,33 +1,35 @@
 
 
 
+function handleCardSlider(){
+  const sliders = document.querySelectorAll('.sliders');
+const prevBtns = document.querySelectorAll('.prev-btn');
+const nextBtns = document.querySelectorAll('.next-btn');
 
-
-const slider = document.querySelector('.sliders');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-
-let counter = 0;
-const cardWidth = document.querySelector('.card').offsetWidth;
-
-prevBtn.addEventListener('click', () => {
-  counter = Math.max(counter - 2, 0);
-  slide();
+prevBtns.forEach(prevBtn => {
+  prevBtn.addEventListener('click', () => {
+    const slider = prevBtn.parentElement.querySelector('.sliders');
+    const cardWidth = slider.querySelector('.card').offsetWidth;
+    let counter = parseInt(slider.dataset.counter) || 0;
+    counter = Math.max(counter - 2, 0);
+    slider.style.transform = `translateX(${-counter * cardWidth}px)`;
+    slider.dataset.counter = counter;
+  });
 });
 
-nextBtn.addEventListener('click', () => {
-  counter = (counter + 2) % (slider.children.length - 3); // Displaying 5 items
-  slide();
+nextBtns.forEach(nextBtn => {
+  nextBtn.addEventListener('click', () => {
+    const slider = nextBtn.parentElement.querySelector('.sliders');
+    const cardWidth = slider.querySelector('.card').offsetWidth;
+    let counter = parseInt(slider.dataset.counter) || 0;
+    counter = (counter + 2) % (slider.children.length - 5); // Displaying 5 items
+    slider.style.transform = `translateX(${-counter * cardWidth}px)`;
+    slider.dataset.counter = counter;
+  });
 });
-
-function slide() {
-  if (counter < 0) {
-    counter = slider.children.length - 3; // Displaying 3 items
-  } else if (counter > slider.children.length - 3) { // Displaying 5 items
-    counter = 0;
-  }
-  slider.style.transform = `translateX(${-counter * cardWidth}px)`;
 }
+
+handleCardSlider()
 
 
 //  pop up

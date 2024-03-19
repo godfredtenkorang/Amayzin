@@ -112,3 +112,11 @@ def galleryDetail(request):
         'title': 'gallery'
     }
     return render(request, 'foundation/galleryDetail.html', context)
+
+def usaproject(request):
+    return render(request, 'foundation/usaProject.html')
+
+def ghanaproject(request):
+    return render(request, 'foundation/ghanaProject.html')
+def donate(request):
+    return render(request, 'foundation/donate.html')
