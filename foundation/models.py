@@ -3,6 +3,29 @@ from embed_video.fields import EmbedVideoField
 
 # Create your models here.
 
+class ProjectCategory(models.Model):
+    name = models.CharField(max_length=50)
+    content = models.TextField()
+    slug = models.SlugField(unique=True)
+    date_added = models.DateTimeField('date published')
+    
+    class Meta:
+        verbose_name_plural = 'project categories'
+        ordering = ['-date_added',]
+
+    def __str__(self):
+        return self.name
+
+class Project(models.Model):
+    main_category = models.ForeignKey(ProjectCategory, on_delete=models.CASCADE)
+    content = models.TextField()
+    image = models.ImageField(upload_to='usproj-img')
+    date_added = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        verbose_name_plural = 'projects'
+        ordering = ['-date_added',]
+        
 
 class YouTube(models.Model):
     title = models.CharField(max_length=100)

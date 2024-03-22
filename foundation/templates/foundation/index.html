@@ -135,33 +135,15 @@
 
             </div>
             <div class="we-do-container ">
-
-
+                {% for category in main_categories %}
                 <div class="what-we-do-col col-1 element">
-                    <h5>Projects in  USA </h5>
-                    <p> The foundation works diligently to provide emergency humanitarian assistance such as food,
-                        rental and utility assistance to low income communities in Anne Arundel County and the state of
-                        Maryland. Our diverse programs provides, motivates and empower young girls, to become empowered
-                        women and teaches self-esteem, youths in leadership training, entrepreneur skills, community
-                        building and providing medical knowledge and assistance to seniors and elderly in need</p>
+                    <h5>{{ category.name }}</h5>
+                    <p>{{ category.content }}</p>
                     <div class="button">
-                        <li><a href="{% url 'usaproject' %}"> Read more</a></li>
+                        <li><a href="{% url 'project' %}?category={{ category.name }}""> Read more</a></li>
                     </div>
                 </div>
-                <div class="what-we-do-col col-2 element">
-                    <h5>Projects in Ghana</h5>
-                    <p>
-                  
-                        
-                        Amayzin Grace Foundation International Inc. is proud to announce the acquisition of a new property in Akyem Anyinasin on August 23rd, 2020, with the vision of establishing a future orphanage. Our team firmly believes in the power of starting small and growing over time, as stated in Job 8:7.
-                        
-                        Our foundation is committed to sharing our gifts with the world and aims to utilize all available resources from God and generous donors to address societal issues and provide a safe haven for the homeless and abused. 
-                    <div class="button">
-                        <li><a href="{% url 'ghanaproject' %}"> Read more</a></li>
-                    </div>
-                    </p>
-                </div>
-                
+                {% endfor %}
             </div>
         </section>
 
