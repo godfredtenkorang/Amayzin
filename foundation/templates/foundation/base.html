@@ -86,8 +86,9 @@
                             <li><a href="{% url 'about' %}">About</a></li>
                             <li><a class="toggle" href="">Project<i class="fa fa-caret-down"></i> </a>
                                 <div class="sub-links">
-                                    <a href="{% url 'usaproject' %}">USA Projects</a>
-                                    <a href="{% url 'ghanaproject' %}">Ghana Project</a>
+                                    {% for category in main_categories %}
+                                    <a href="{% url 'project' %}?category={{ category.name }}">{{ category.name }}</a>
+                                    {% endfor %}
                                 </div>
                                 <i class="fa-solid fa-plus"></i>
                             </li>

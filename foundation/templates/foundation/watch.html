@@ -2,6 +2,7 @@
 
 {% extends 'foundation/base.html' %}
 {% load static %}
+{% load embed_video_tags %}
 {% block content %}
     <!-- banner -->
     <div class="banner-section">
@@ -16,9 +17,9 @@
         <section class="watch-us-section main">
             {% for video in videos %}
             <div class="watch">
-                <iframe src="{{ video.url }}" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+                <article>
+                    {% video video.url '320x240' %}
+                </article>
             </div>
             {% endfor %}
         </section>

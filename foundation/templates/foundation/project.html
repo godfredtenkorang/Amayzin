@@ -1,0 +1,220 @@
+{% extends 'foundation/base.html' %}
+{% load static %}
+{% block content %}
+
+<main>
+    <!-- banner -->
+    <div class="banner-section">
+        <img src="{% static 'foundation/img/slideShow.jpg' %}" alt="">
+        <div class="banner-text main">
+            {% if main_category %}
+                <h1>{{ main_category }}</h1>
+            {% else %}
+                <h1>No Project Found</h1>
+            {% endif %}
+        </div>
+    </div>
+    {% for project in projects %}
+    <!-- project section -->
+    <section class="project-section-container">
+        <div class="project-content-container">
+            <!-- project heading -->
+            <div class="project-heading">
+                <h2>{{ project.title }}</h2>
+            </div>
+            <!-- project details -->
+            <div class="prpject-details">
+                <p>{{ project.content }}</p>
+            </div>
+        </div>
+
+        <!-- project pictures -->
+        <div class="project-pictures slider-containers ">
+            <div class="sliders">
+                <!-- project image -->
+                <div class="card">
+                    <img src="{{ project.image.url }}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+            </div>
+            <button class="prev-btn">Prev</button>
+            <button class="next-btn">Next</button>
+        </div>
+
+        </div>
+        </div>
+    </section>
+    {% endfor %}
+
+    <!-- project section -->
+    <section class="project-section-container">
+        <div class="project-content-container">
+            <!-- project heading -->
+            <div class="project-heading">
+                <h2>Project heading here</h2>
+            </div>
+            <!-- project details -->
+            <div class="prpject-details">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo voluptatum nobis commodi fuga
+                    in aliquid molestiae consectetur veniam quidem deleniti facilis iste praesentium dignissimos
+                    officia, maiores ipsa illum maxime labore soluta blanditiis. Quis vitae tempore minus atque qui
+                    quisquam fuga incidunt assumenda cupiditate ab ipsum molestias dolor officia natus inventore,
+                    doloribus numquam non quaerat vel, voluptates deleniti distinctio! Molestias ab eaque inventore
+                    ullam doloribus culpa distinctio facere harum quibusdam!</p>
+            </div>
+        </div>
+        <!-- project pictures -->
+        <div class="project-pictures slider-containers ">
+            <div class="sliders">
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(2).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(3).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(4).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(5).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(6).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(2).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(3).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(6).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(2).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(3).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+
+
+
+            </div>
+            <button class="prev-btn">Prev</button>
+            <button class="next-btn">Next</button>
+        </div>
+
+       
+    </section>
+
+
+
+
+    <!-- project section -->
+    <section class="project-section-container">
+        <div class="project-content-container">
+            <!-- project heading -->
+            <div class="project-heading">
+                <h2>Project heading here</h2>
+            </div>
+            <!-- project details -->
+            <div class="prpject-details">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo voluptatum nobis commodi fuga
+                    in aliquid molestiae consectetur veniam quidem deleniti facilis iste praesentium dignissimos
+                    officia, maiores ipsa illum maxime labore soluta blanditiis. Quis vitae tempore minus atque qui
+                    quisquam fuga incidunt assumenda cupiditate ab ipsum molestias dolor officia natus inventore,
+                    doloribus numquam non quaerat vel, voluptates deleniti distinctio! Molestias ab eaque inventore
+                    ullam doloribus culpa distinctio facere harum quibusdam!</p>
+            </div>
+        </div>
+        <!-- project pictures -->
+        <div class="project-pictures slider-containers ">
+            <div class="sliders">
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(2).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(3).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(4).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(5).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(6).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(2).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(3).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(6).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(2).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+                <!-- project image -->
+                <div class="card">
+                    <img src="{% static 'foundation/img/image(3).jpg' %}" onclick="showImage(this)" alt="Banner Image">
+
+                </div>
+
+
+
+            </div>
+            <button class="prev-btn">Prev</button>
+            <button class="next-btn">Next</button>
+        </div>
+
+       
+    </section>
+
+
+    <!-- pop up -->
+    <div class="popupImage" id="popupImage">
+        <img src="" alt="" id="pop-up-img" onclick="hidePopup()">
+    </div>
+
+</main>
+
+{% endblock content %}
