@@ -5,11 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website Title</title>
+    {% if title %}
+        <title>Amazyn Grace Foundation Inc - {{ title }}</title>
+    {% else %}
+        <title>Your Website Title</title>
+    {% endif %}
 
-
-    <!-- Primary Meta Tags -->
-    <title>Amazyn Grace Foundation Inc - Empowering Lives, Building Hope</title>
     <meta name="description"
         content="Amazyn Grace Foundation Inc is a non-profit organization dedicated to empowering vulnerable individuals, providing humanitarian assistance, and fostering hope. Join us in our mission to make a positive impact on the world.">
     <meta name="keywords"
