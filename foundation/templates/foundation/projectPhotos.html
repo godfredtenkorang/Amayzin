@@ -12,16 +12,46 @@
     </div>
 
 
-    <section class="project-more-photos main">
+    <section class="project-more-photos photo main">
 
         <img src="{% static 'foundation/img/image(2).jpg' %}" alt="photo">
-        <img src="{% static 'foundation/img/image(2).jpg' %}" alt="photo">
+        <img src="{% static 'foundation/img/image(3).jpg' %}" alt="photo">
         <img src="{% static 'foundation/img/image(2).jpg' %}" alt="photo">
         <img src="{% static 'foundation/img/image(2).jpg' %}" alt="photo">
 
 
     </section>
-   
+     <!-- Container for gallery pop-up functionality -->
+     <div class="gallery-pop-up-container">
+        <!-- Utility buttons for zooming and closing the pop-up -->
+        <div class="gallery-top-utility">
+            <div class="gallery-top-utility-col">
+                <!-- Zoom button -->
+                <p> <i class="fa fa-search-minus" id="zoomButton"></i></p>
+            </div>
+            <div class="gallery-top-utility-col">
+                <!-- Close button -->
+                <p><i class="fa fa-times" id="remove-popUp"></i></p>
+            </div>
+        </div>
+
+        <!-- Container for displaying the enlarged image and navigation buttons -->
+        <div class="pop-image-container">
+            <!-- Button for navigating to the previous image -->
+            <div class="previous-button">
+                <button id="prevButton"><i class="fa-solid fa-less-than"></i></button>
+            </div>
+            <!-- Container for the enlarged image -->
+            <div class="gallery-popUp-img">
+                <!-- Placeholder for the enlarged image -->
+                <img id="popUpImage" src="" alt="about image">
+            </div>
+            <!-- Button for navigating to the next image -->
+            <div class="next-Button">
+                <button id="nextButton"><i class="fa-solid fa-greater-than"></i></button>
+            </div>
+        </div>
+    </div>
    
 
 </main>

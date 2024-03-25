@@ -1036,7 +1036,7 @@ input.search-box {
 .project-pictures  img{
     width: 100%;
 
-aspect-ratio: 10/7;
+
    
 }
 .project-content-container, .project-pictures{
@@ -1520,7 +1520,7 @@ min-height: 80vh;
 
 .photo img{
     width: 100%;
-    height: 60vh;
+    height: 50vh;
     object-fit: cover;
     cursor: pointer;
 }
