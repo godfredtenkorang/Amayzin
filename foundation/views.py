@@ -258,3 +258,8 @@ def donate(request):
         'title': 'Donate'
     }
     return render(request, 'foundation/donate.html', context)
+
+
+def projectPhotos(request):
+    return render(request, 'foundation/projectPhotos.html')
+

@@ -8,9 +8,9 @@
         <img src="{% static 'foundation/img/slideShow.jpg' %}" alt="">
         <div class="banner-text main">
             {% if main_category %}
-                <h1>{{ main_category }}</h1>
+            <h1>{{ main_category }}</h1>
             {% else %}
-                <h1>No Project Found</h1>
+            <h1>No Project Found</h1>
             {% endif %}
         </div>
     </div>
@@ -29,26 +29,20 @@
         </div>
 
         <!-- project pictures -->
-        <div class="project-pictures slider-containers ">
-            <div class="sliders">
-                <!-- project image -->
-                <div class="card">
-                    <img src="{{ project.image.url }}" onclick="showImage(this)" alt="Banner Image">
+        <div class="project-pictures ">
+            <!-- project image -->
+            <img src="{{ project.image.url }}" alt="Banner Image">
 
-                </div>
-            </div>
-            <button class="prev-btn">Prev</button>
-            <button class="next-btn">Next</button>
-        </div>
+           <div class="see-more-picturs">
+            <a href="{% url 'projectPhotos' %}">See more photos</a>
+           </div>
 
         </div>
-        </div>
+
+       
     </section>
     {% endfor %}
-    <!-- pop up -->
-    <div class="popupImage" id="popupImage">
-        <img src="" alt="" id="pop-up-img" onclick="hidePopup()">
-    </div>
+   
 
 </main>
 
