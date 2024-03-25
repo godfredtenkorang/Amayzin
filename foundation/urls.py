@@ -15,5 +15,6 @@ urlpatterns = [
     path('galleryDetail/', views.galleryDetail, name='galleryDetail'),
     path('project', views.project, name='project'),
     path('donate', views.donate, name='donate'),
+    path('projectPhotos', views.projectPhotos, name='projectPhotos'),
 ]
 
