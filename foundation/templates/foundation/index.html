@@ -138,7 +138,7 @@
                 {% for category in main_categories %}
                 <div class="what-we-do-col col-1 element">
                     <h5>{{ category.name }}</h5>
-                    <p>{{ category.content }}</p>
+                    <p>{{ category.home_content }}</p>
                     <div class="button">
                         <li><a href="{% url 'project' %}?category={{ category.name }}""> Read more</a></li>
                     </div>

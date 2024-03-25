@@ -260,6 +260,12 @@ def donate(request):
     return render(request, 'foundation/donate.html', context)
 
 
-def projectPhotos(request):
-    return render(request, 'foundation/projectPhotos.html')
+def projectPhotos(request, project_slug):
+    project = Project.objects.get(slug=project_slug)
+    
+    context = {
+        'project': project,
+        'title': 'Donate'
+    }
+    return render(request, 'foundation/projectPhotos.html', context)
 

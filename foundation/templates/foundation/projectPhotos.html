@@ -14,12 +14,8 @@
 
     <section class="project-more-photos photo main">
 
-        <img src="{% static 'foundation/img/image(2).jpg' %}" alt="photo">
-        <img src="{% static 'foundation/img/image(3).jpg' %}" alt="photo">
-        <img src="{% static 'foundation/img/image(2).jpg' %}" alt="photo">
-        <img src="{% static 'foundation/img/image(2).jpg' %}" alt="photo">
-
-
+        <img src="{{ project.image.url }}" alt="photo">
+        
     </section>
      <!-- Container for gallery pop-up functionality -->
      <div class="gallery-pop-up-container">

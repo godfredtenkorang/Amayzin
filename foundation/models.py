@@ -5,7 +5,9 @@ from embed_video.fields import EmbedVideoField
 
 class ProjectCategory(models.Model):
     name = models.CharField(max_length=50)
-    content = models.TextField()
+    project_title = models.CharField(max_length=250)
+    project_content = models.TextField()
+    home_content = models.TextField()
     slug = models.SlugField(unique=True)
     date_added = models.DateTimeField('date published')
     
@@ -18,8 +20,8 @@ class ProjectCategory(models.Model):
 
 class Project(models.Model):
     main_category = models.ForeignKey(ProjectCategory, on_delete=models.CASCADE)
-    content = models.TextField()
     image = models.ImageField(upload_to='usproj-img')
+    slug = models.SlugField(unique=True)
     date_added = models.DateTimeField(auto_now_add=True)
     
     class Meta:

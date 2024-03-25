@@ -25,7 +25,7 @@ class ProjectInLine(admin.TabularInline):
 
 
 class CategoryProjectAdmin(admin.ModelAdmin):
-    fieldsets = [(None, {'fields': ['name', 'content', 'slug']}), ('Date Information', {
+    fieldsets = [(None, {'fields': ['name', 'project_title', 'project_content', 'home_content', 'slug']}), ('Date Information', {
         'fields': ['date_added'], 'classes': ['collapse']
     }), ]
     inlines = [ProjectInLine]

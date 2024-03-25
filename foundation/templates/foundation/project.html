@@ -34,7 +34,7 @@
             <img src="{{ project.image.url }}" alt="Banner Image">
 
            <div class="see-more-picturs">
-            <a href="{% url 'projectPhotos' %}">See more photos</a>
+            <a href="{% url 'projectPhotos' project.slug %}">See more photos</a>
            </div>
 
         </div>
