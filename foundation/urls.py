@@ -13,8 +13,10 @@ urlpatterns = [
     path('news_detail/<slug:news_slug>/', views.detail, name='detail'),
     path('photos', views.photos, name='photos'),
     path('galleryDetail/', views.galleryDetail, name='galleryDetail'),
-    path('project', views.project, name='project'),
     path('donate', views.donate, name='donate'),
-    path('projectPhotos/<slug:project_slug>/', views.projectPhotos, name='projectPhotos'),
+    path('ghprojectPhotos/', views.ghprojectPhotos, name='ghprojectPhotos'),
+    path('usaprojectPhotos/', views.usaprojectPhotos, name='usaprojectPhotos'),
+    path('usaproject/', views.usaProject, name='usaproject'),
+    path('ghanaproject/', views.ghProject, name='ghproject'),
 ]
 

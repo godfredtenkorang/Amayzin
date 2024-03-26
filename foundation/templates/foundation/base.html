@@ -87,9 +87,8 @@
                             <li><a href="{% url 'about' %}">About</a></li>
                             <li><a class="toggle" href="">Project<i class="fa fa-caret-down"></i> </a>
                                 <div class="sub-links">
-                                    {% for category in main_categories %}
-                                    <a href="{% url 'project' %}?category={{ category.name }}">{{ category.name }}</a>
-                                    {% endfor %}
+                                    <a href="{% url 'ghproject' %}">GHANA PROJECT</a>
+                                    <a href="{% url 'usaproject' %}">USA PROJECT</a>
                                 </div>
                                 <i class="fa-solid fa-plus"></i>
                             </li>
@@ -184,7 +183,7 @@
         </div>
         <div class="copy-right-section">
             <p>© 2024 Amazyn Grace Foundation All rights reserved.
-            <p>Developy by <a href="">GodeyTech</a></p>
+            <p>Developed by <a href="">GodeyTech</a></p>
             </p>
 
         </div>

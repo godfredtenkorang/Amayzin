@@ -13,9 +13,9 @@
 
 
     <section class="project-more-photos photo main">
-
+        {% for project in projects %}
         <img src="{{ project.image.url }}" alt="photo">
-        
+        {% endfor %}
     </section>
      <!-- Container for gallery pop-up functionality -->
      <div class="gallery-pop-up-container">

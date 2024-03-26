@@ -10,39 +10,39 @@
             {% if main_category %}
             <h1>{{ main_category }}</h1>
             {% else %}
-            <h1>No Project Found</h1>
+            <h1>GHANA PROJECTS</h1>
             {% endif %}
         </div>
     </div>
-    {% for project in projects %}
+    {% for category in categories %}
     <!-- project section -->
     <section class="project-section-container">
         <div class="project-content-container">
             <!-- project heading -->
             <div class="project-heading">
-                <h2>{{ project.title }}</h2>
+                <h2>{{ category.title }}</h2>
             </div>
             <!-- project details -->
             <div class="prpject-details">
-                <p>{{ project.content }}</p>
+                <p>{{ category.content }}</p>
             </div>
         </div>
 
         <!-- project pictures -->
         <div class="project-pictures ">
             <!-- project image -->
-            <img src="{{ project.image.url }}" alt="Banner Image">
+            <img src="{{ category.image.url }}" alt="Banner Image">
 
-           <div class="see-more-picturs">
-            <a href="{% url 'projectPhotos' project.slug %}">See more photos</a>
-           </div>
+            <div class="see-more-picturs">
+                <a href="{% url 'ghprojectPhotos' %}?category={{ category.title }}">See more photos</a>
+            </div>
 
         </div>
 
-       
+
     </section>
     {% endfor %}
-   
+
 
 </main>
 

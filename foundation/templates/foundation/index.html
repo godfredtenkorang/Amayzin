@@ -2,150 +2,178 @@
 {% load static %}
 {% block content %}
 
-    <!-- slide show section -->
-    <!-- Slide show section -->
-    <section class="slide-show">
-        <!-- Slide items with images and text -->
-        <div class="slide">
-            <!-- Image with alt text for SEO -->
-            <img src="{% static 'foundation/img/slideShow1.jpg' %}" alt="Slide 1">
-            <div class="slid-show-text">
-                <!-- Title and description -->
-                <h1>Support Our Cause with Your Generosity!</h1>
-                <p>Your contribution can make a significant impact on our mission. By donating today</p>
-                <!-- Links -->
-                <div class="links-on-slide-show">
-                    <a href="#what-wedo">Our Project</a>
-                    <a href="{% url 'contact' %}">Contact</a>
-                </div>
+<!-- slide show section -->
+<!-- Slide show section -->
+<section class="slide-show">
+    <!-- Slide items with images and text -->
+    <div class="slide">
+        <!-- Image with alt text for SEO -->
+        <img src="{% static 'foundation/img/slideShow1.jpg' %}" alt="Slide 1">
+        <div class="slid-show-text">
+            <!-- Title and description -->
+            <h1>Support Our Cause with Your Generosity!</h1>
+            <p>Your contribution can make a significant impact on our mission. By donating today</p>
+            <!-- Links -->
+            <div class="links-on-slide-show">
+                <a href="#what-wedo">Our Project</a>
+                <a href="{% url 'contact' %}">Contact</a>
             </div>
         </div>
+    </div>
 
-        <div class="slide">
-            <!-- Image with alt text for SEO -->
-            <img src="{% static 'foundation/img/slideShow-2.jpg' %}" alt="Slide 2">
-            <div class="slid-show-text">
-                <!-- Title and description -->
-                <h1>Support Our Cause with Your Generosity!</h1>
-                <p>Your contribution can make a significant impact on our mission. By donating today</p>
-                <!-- Links -->
-                <div class="links-on-slide-show">
-                    <a href="#what-wedo">Our Project</a>
-                    <a href="{% url 'contact' %}">Contact</a>
-                </div>
+    <div class="slide">
+        <!-- Image with alt text for SEO -->
+        <img src="{% static 'foundation/img/slideShow-2.jpg' %}" alt="Slide 2">
+        <div class="slid-show-text">
+            <!-- Title and description -->
+            <h1>Support Our Cause with Your Generosity!</h1>
+            <p>Your contribution can make a significant impact on our mission. By donating today</p>
+            <!-- Links -->
+            <div class="links-on-slide-show">
+                <a href="#what-wedo">Our Project</a>
+                <a href="{% url 'contact' %}">Contact</a>
             </div>
         </div>
+    </div>
 
-        <div class="slide">
-            <!-- Image with alt text for SEO -->
-            <img src="{% static 'foundation/img/slideShow3.jpg' %}" alt="Slide 2">
-            <div class="slid-show-text">
-                <!-- Title and description -->
-                <h1>Support Our Cause with Your Generosity!</h1>
-                <p>Your contribution can make a significant impact on our mission. By donating today</p>
-                <!-- Links -->
-                <div class="links-on-slide-show">
-                    <a href="#what-wedo">Our Project</a>
-                    <a href="{% url 'contact' %}">Contact</a>
-                </div>
+    <div class="slide">
+        <!-- Image with alt text for SEO -->
+        <img src="{% static 'foundation/img/slideShow3.jpg' %}" alt="Slide 2">
+        <div class="slid-show-text">
+            <!-- Title and description -->
+            <h1>Support Our Cause with Your Generosity!</h1>
+            <p>Your contribution can make a significant impact on our mission. By donating today</p>
+            <!-- Links -->
+            <div class="links-on-slide-show">
+                <a href="#what-wedo">Our Project</a>
+                <a href="{% url 'contact' %}">Contact</a>
             </div>
         </div>
-        <!-- Slide show navigation buttons -->
-        <div class="slide-show-button">
-            <button class="prev"><i class="fa-solid fa-less-than"></i></button>
-            <button class="next"><i class="fa-solid fa-greater-than"></i></button>
+    </div>
+    <!-- Slide show navigation buttons -->
+    <div class="slide-show-button">
+        <button class="prev"><i class="fa-solid fa-less-than"></i></button>
+        <button class="next"><i class="fa-solid fa-greater-than"></i></button>
+    </div>
+</section>
+
+
+<main>
+    <!-- about us -->
+    <section class="about-section-container main ">
+        <div class="about-section">
+
+            <div class="about-content element ">
+                <div class="heading">
+                    <h2>Amazyn Grace Foundation Inc</h2>
+                </div>
+                </p>
+
+                <div class="content-col">
+
+                    <p>The Amayzin Grace Foundation Intl Inc. was established by Grace Cece Ofosu, a compassionate
+                        and
+                        talented teacher, with the aim of creating a brighter future for the vulnerable, poor, and
+                        less-privileged individuals, particularly orphans and those who have been abused. Grace, the
+                        founder, was born in Ghana and raised in the United States, where she witnessed firsthand
+                        the
+                        challenges faced by orphans, abused individuals, and the less-privileged in accessing basic
+                        necessities such as food, education, and healthcare.
+                    </p>
+                </div>
+                <div class="content-col">
+                    <p>Determined to make a difference, Grace is committed to partnering with philanthropists and
+                        donors
+                        to bring attention to the needs of neglected individuals, especially orphans and vulnerable
+                        children. She firmly believes that through collaborative efforts with donors, opportunities
+                        can
+                        be created to provide basic education, shelter, and healthcare support to those in need,
+                        particularly in developing countries.
+                    </p>
+                </div>
+                <div class="content-col">
+                    <p> Grace's vision is rooted in the belief that investing in these individuals is not only an
+                        investment in their future, but also in the world as a whole, as it paves the way for the
+                        potential growth of future doctors and other professionals.</p>
+                </div>
+
+                <div class="button">
+                    <li><a href="{% url 'donate' %}"><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate Now</a>
+                    </li>
+                </div>
+            </div>
+            <div class="about-img element">
+                <img src="{% static 'foundation/img/image(2).jpg' %}" alt="about image">
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- about us end -->
+
+    <!-- sponsor a child -->
+    <section class="sponsor-a-child-section element main">
+
+        <div class="sponsor-a-child-content">
+            <h3>Support a child through sponsorship or select a birthday twin:
+            </h3>
+            <P>
+
+                Empower a child's future through the act of sponsorship. Your generous support enables us to provide
+                essential care, education, and happiness, ensuring every child thrives. Your contribution holds the
+                power to make a profound difference in their lives. Reach out to us today, whether you're in Maryland,
+                United States, Sierra Leone, or Nigeria, to explore the opportunities to sponsor a child through the
+                Amayzin Grace Foundation. Sponsorship options are available on a monthly, quarterly, or annual basis.
+                You can also connect with a child who shares your birthday and share in their celebrations. Get in touch
+                with us now.
+            </P>
+            <div class="button">
+                <li><a href="{% url 'sponsorship' %}"> More Details</a></li>
+            </div>
         </div>
     </section>
 
 
-    <main>
-        <!-- about us -->
-        <section class="about-section-container main ">
-            <div class="about-section">
+    <!-- what we do section -->
+    <section class="what-we-do-section main" id="what-wedo">
+        <div class="we-do-heading">
+            <h5>What We do</h5>
 
-                <div class="about-content element ">
-                    <div class="heading">
-                        <h2>Amazyn Grace Foundation Inc</h2>
-                    </div>
-                    </p>
-
-                    <div class="content-col">
-
-                        <p>The Amayzin Grace Foundation Intl Inc. was established by Grace Cece Ofosu, a compassionate
-                            and
-                            talented teacher, with the aim of creating a brighter future for the vulnerable, poor, and
-                            less-privileged individuals, particularly orphans and those who have been abused. Grace, the
-                            founder, was born in Ghana and raised in the United States, where she witnessed firsthand
-                            the
-                            challenges faced by orphans, abused individuals, and the less-privileged in accessing basic
-                            necessities such as food, education, and healthcare.
-                        </p>
-                    </div>
-                    <div class="content-col">
-                        <p>Determined to make a difference, Grace is committed to partnering with philanthropists and
-                            donors
-                            to bring attention to the needs of neglected individuals, especially orphans and vulnerable
-                            children. She firmly believes that through collaborative efforts with donors, opportunities
-                            can
-                            be created to provide basic education, shelter, and healthcare support to those in need,
-                            particularly in developing countries.
-                        </p>
-                    </div>
-                    <div class="content-col">
-                        <p> Grace's vision is rooted in the belief that investing in these individuals is not only an
-                            investment in their future, but also in the world as a whole, as it paves the way for the
-                            potential growth of future doctors and other professionals.</p>
-                    </div>
-
-                    <div class="button">
-                        <li><a href="{% url 'donate' %}"><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate Now</a></li>
-                    </div>
-                </div>
-                <div class="about-img element">
-                    <img src="{% static 'foundation/img/image(2).jpg' %}" alt="about image">
-
-
-                </div>
-
-            </div>
-        </section>
-        <!-- about us end -->
-
-         <!-- sponsor a child -->
-         <section class="sponsor-a-child-section element main">
-
-            <div class="sponsor-a-child-content">
-                <h3>Support a child through sponsorship or select a birthday twin:
-                </h3>
-                <P>
-
-                    Empower a child's future through the act of sponsorship. Your generous support enables us to provide essential care, education, and happiness, ensuring every child thrives. Your contribution holds the power to make a profound difference in their lives. Reach out to us today, whether you're in Maryland, United States, Sierra Leone, or Nigeria, to explore the opportunities to sponsor a child through the Amayzin Grace Foundation. Sponsorship options are available on a monthly, quarterly, or annual basis. You can also connect with a child who shares your birthday and share in their celebrations. Get in touch with us now.
-                </P>
+        </div>
+        <div class="we-do-container ">
+            <div class="what-we-do-col col-1 element">
+                <h5>Ghana Project</h5>
+                <p>Amayzin Grace Foundation International Inc. is proud to announce the acquisition of a new property in
+                    Akyem Anyinasin on
+                    August 23rd, 2020, with the vision of establishing a future orphanage. Our team firmly believes in
+                    the power of starting
+                    small and growing over time, as stated in Job 8:7. Our foundation is committed to sharing our gifts
+                    with the world and
+                    aims to utilize all available resources from God and generous donors to address societal issues and
+                    provide a safe haven
+                    for the homeless and abused.</p>
                 <div class="button">
-                    <li><a href="{% url 'sponsorship' %}"> More Details</a></li>
+                    <li><a href="{% url 'ghproject' %}""> Read more</a></li>
                 </div>
             </div>
-        </section>
-
-
-        <!-- what we do section -->
-        <section class="what-we-do-section main" id="what-wedo">
-            <div class="we-do-heading">
-                <h5>What We do</h5>
-
-            </div>
-            <div class="we-do-container ">
-                {% for category in main_categories %}
-                <div class="what-we-do-col col-1 element">
-                    <h5>{{ category.name }}</h5>
-                    <p>{{ category.home_content }}</p>
+            <div class=" what-we-do-col col-1 element">
+                            <h5>USA Project</h5>
+                            <p>The foundation works diligently to provide emergency humanitarian assistance such as
+                                food, rental and utility assistance
+                                to low income communities in Anne Arundel County and the state of Maryland. Our diverse
+                                programs provides, motivates and
+                                empower young girls, to become empowered women and teaches self-esteem, youths in
+                                leadership training, entrepreneur
+                                skills, community building and providing medical knowledge and assistance to seniors and
+                                elderly in need.
+                            </p>
                     <div class="button">
-                        <li><a href="{% url 'project' %}?category={{ category.name }}""> Read more</a></li>
+                        <li><a href="{% url 'usaproject' %}""> Read more</a></li>
                     </div>
-                </div>
-                {% endfor %}
             </div>
-        </section>
+        </div>
+    </section>
 
 
 

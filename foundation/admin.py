@@ -19,19 +19,35 @@ admin.site.site_title = "Amayzin Admin Area"
 admin.site.index_title = "Welcome to the Amayzin Admin Area"
 
 
-class ProjectInLine(admin.TabularInline):
-    model = Project
+class GhanaProjectInLine(admin.TabularInline):
+    model = GhanaProject
     extra = 2
 
 
 class CategoryProjectAdmin(admin.ModelAdmin):
-    fieldsets = [(None, {'fields': ['name', 'project_title', 'project_content', 'home_content', 'slug']}), ('Date Information', {
+    fieldsets = [(None, {'fields': ['image', 'title', 'content', 'slug']}), ('Date Information', {
         'fields': ['date_added'], 'classes': ['collapse']
     }), ]
-    inlines = [ProjectInLine]
+    inlines = [GhanaProjectInLine]
 
 
-admin.site.register(ProjectCategory, CategoryProjectAdmin)
+admin.site.register(GhanaCategory, CategoryProjectAdmin)
+
+
+class USAProjectInLine(admin.TabularInline):
+    model = USAProject
+    extra = 2
+
+
+class CategoryProjectAdmin(admin.ModelAdmin):
+    fieldsets = [(None, {'fields': ['image', 'title', 'content', 'slug']}), ('Date Information', {
+        'fields': ['date_added'], 'classes': ['collapse']
+    }), ]
+    inlines = [USAProjectInLine]
+
+
+admin.site.register(USACategory, CategoryProjectAdmin)
+
 
 
 class GalleryInLine(admin.TabularInline):
