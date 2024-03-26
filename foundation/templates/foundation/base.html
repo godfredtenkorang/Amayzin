@@ -50,7 +50,7 @@
             <!-- Column for contact information -->
             <div class="top-nav-col">
 
-                <p>A 501(c)(3) non-profit charitable organization.</p>
+                <p> non-profit charitable organization</p>
                 <p><i class="fa fa-phone-volume"></i> 1-518-818-7832</p>
                 <p><i class="fa-solid fa-envelope"></i> amazingg2018@yahoo.com</p>
             </div>
@@ -103,7 +103,10 @@
                             <li><a href="{% url 'sponsorship' %}">Sponsorship</a></li>
                             <li><a href="{% url 'getinvolve' %}">Get Involved</a></li>
                             <li><a href="{% url 'contact' %}">Contact</a></li>
-
+                            <div class="donateBut">
+                                <li><a href="{% url 'donate' %}"><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate
+                                        Now</a></li>
+                            </div>
                         </ul>
                         <div class="remove-nav">
                             <i class="fas fa-times"></i>
@@ -140,7 +143,7 @@
                 <div class="company-logo-footer">
 
                     <img src="{% static 'foundation/img/company-logo.png' %}" alt="">
-                    <h2>Amazyn Grace <br> Foundation Inc</h2>
+                    <h5>Amazyn Grace <br> Foundation Inc</h5>
 
                 </div>
                 <p>The Amayzin Grace Foundation Intl Inc., founded by Grace Cece Ofosu, aims to uplift vulnerable
@@ -149,12 +152,13 @@
                     impact on both individuals and global communities.</p>
 
             </div>
-            <div class="footer-col">
+            <div class="footer-col footer-contact">
                 <h5>Contact Us</h5>
-                <p><span>Phone : </span> <br> <br> 1-518-818-7832 </p>
-                <p><span>Address :</span><br> <br> 1125 West Street Suite 200 Annapolis, MD 21401
+                <p><span>Phone : </span> 1-518-818-7832 </p>
+                <p><span>Address :</span> 2 Mercer ave, Latham, NY 12110 
+                    United States
                 </p>
-                <p><span>Email:</span>: <br> <br> amazingg2018@yahoo.com
+                <p><span>Email:</span>: amazingg2018@yahoo.com
                 </p>
                 <div class="social-medias">
                     <a href="https://web.facebook.com/amayzingracefdnint"><i class="fa-brands fa-facebook"></i></a>
@@ -168,22 +172,18 @@
                 </div>
             </div>
             <div class="footer-col">
-                <h5>Useful Links</h5>
+                <h5>Links</h5>
                 <li><a href="{% url 'index' %}">Home</a></li>
                 <li><a href="{% url 'about' %}">About</a></li>
                 <li><a href="{% url 'sponsorship' %}">Sponsorship</a></li>
                 <li><a href="{% url 'getinvolve' %}">Get Involved</a></li>
                 <li><a href="{% url 'contact' %}">Contact</a></li>
-                <li> <a href="{% url 'watch' %}">Videos</a></li>
-                <li> <a href="{% url 'photos' %}">Gallery</a>
-                </li>
-                <li> <a href="{% url 'news' %}">Blogs</a>
-                </li>
+               
             </div>
         </div>
         <div class="copy-right-section">
             <p>© 2024 Amazyn Grace Foundation All rights reserved.
-            <p>Developed by <a href="">GodeyTech</a></p>
+            <p>Developed by <a href="https://wa.link/ym6ydl">GodeyTech</a></p>
             </p>
 
         </div>

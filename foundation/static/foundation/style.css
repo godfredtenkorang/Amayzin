@@ -14,7 +14,7 @@ html{
 
 /* main */
 .main {
-    padding: 4% 14%;
+    padding: 5% 14%;
 }
 
 body {
@@ -97,7 +97,7 @@ p {
 
 .top-nav-col {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     gap: 1rem;
     color: var(--light);
     font-size: 1vw;
@@ -254,7 +254,7 @@ nav {
 
 
 
-.donate-button {
+.donate-button{
     width: 120px;
     background-color: var(--main-Color);
     padding: 5px 6px;
@@ -262,10 +262,29 @@ nav {
     text-align: center;
 }
 
-.donate-button a {
+.donate-button a{
     width: 100%;
     color: var(--whiteColor);
+}
+ .donateBut a{
+    width: 100%;
+    color: var(--whiteColor);
+    padding: 10px 0;
+    background-color: var(--main-Color);
+    text-align: center;
+}
 
+ .donateBut li{
+border-bottom: none !important;
+
+}
+
+.donateBut a:hover{
+    color: var(--whiteColor) !important;
+}
+.donateBut {
+    display: none;
+    width: 100%;
 
 }
 
@@ -479,7 +498,7 @@ nav {
 }
 
 .sponsor-a-child-content p {
-    padding-bottom: 2%;
+  
     line-height: 30px;
 }
 
@@ -488,6 +507,7 @@ nav {
 /* what we do section */
 .what-we-do-section {
     background-color: var(--light);
+   
 }
 
 .we-do-heading {
@@ -496,7 +516,8 @@ nav {
 }
 
 .we-do-heading h4 {
-    padding-bottom: 10px;
+  
+    padding: 4% 0;
     color: var(--black);
 }
 
@@ -527,7 +548,7 @@ nav {
 }
 
 .button {
-    margin-top: 2%;
+    margin: 4% 0;
 }
 
 .button a {
@@ -1050,7 +1071,7 @@ input.search-box {
     padding-bottom: 2%;
 }
 .see-more-picturs {
-margin-top: 2%;
+margin: 5% 0;
 
 }
 
@@ -1088,12 +1109,13 @@ margin-top: 2%;
 footer {
     background-color: #000;
     width: 100%;
+    
 
 }
 
 .footer {
     display: flex;
-
+justify-content: space-between;
     gap: 5rem;
 }
 
@@ -1124,9 +1146,11 @@ footer {
     gap: 5px;
 }
 
-.company-logo-footer h2 {
+.company-logo-footer h5 {
     color: var(--main-Color);
     font-size: 1.3rem;
+    text-align: center;
+ padding-top: 10px;
 }
 
 .company-logo-footer img {
@@ -1138,16 +1162,28 @@ footer {
 }
 
 .footer-col li {
-    padding: 5% 0;
+    padding: 3% 0;
+}
+
+.footer-contact p{
+    padding-bottom: 3%;
+    line-height: 30px;
+
 }
 
 .footer-col a {
     color: #ffffff80;
 }
+.social-medias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
 
 .social-medias i {
     background-color: #ffffff80;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 50%;
     color: var(--light);
 }
 
@@ -1156,11 +1192,12 @@ footer {
     min-height: 10vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+   
     color: var(--light);
     flex-wrap: wrap;
     gap: 2rem;
     padding: 1% 14%;
+    width: 100%;
 }
 /* contact us page */
 
@@ -1648,7 +1685,7 @@ min-height: 80vh;
 
     .main,
     .copy-right-section,.project-content-container, .project-pictures {
-        padding: 4% 8%;
+        padding: 6% 8%;
     }
 
     .top-nav-col {
@@ -1692,7 +1729,7 @@ min-height: 80vh;
     }
 
     .company-logo h3{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .menu-icon,
@@ -1721,6 +1758,8 @@ min-height: 80vh;
         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
         flex-direction: column;
         animation: slideIn 0.5s;
+        overflow-y: scroll;
+
 
 
     }
@@ -1837,10 +1876,14 @@ min-height: 80vh;
         height: auto;
     }
 
-    .main,
+    .main
+    {
+        padding: 5% 6%;
+    }
     .copy-right-section {
         padding: 3% 6%;
     }
+
 
     .we-do-container {
         flex-direction: column;
@@ -1868,6 +1911,13 @@ min-height: 80vh;
         width: calc(100% / 3);
         /* Displaying 3 items out of 10 */
     }
+
+    .company-logo-footer img{
+        width: 50px;
+    }
+    .company-logo-footer h5{
+        font-size: 17px;
+    }
 }
 
 
@@ -1883,10 +1933,12 @@ min-height: 80vh;
         /* Further reduced padding for smaller tablets and mobile devices */
     }
 
+    
     .main,
     .copy-right-section , .project-content-container ,.project-pictures{
         padding: 2% 4%;
     }
+    
 
     .slide-show-button {
         display: none;
@@ -1895,6 +1947,12 @@ min-height: 80vh;
     .donate-button {
         display: none;
     }
+
+    .donateBut{
+        display: block;
+    }
+   
+    
 
 
     .links-on-slide-show a {
@@ -1924,7 +1982,7 @@ min-height: 80vh;
     }
 
     .footer {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 2rem;
     }
 
@@ -1972,9 +2030,7 @@ min-height: 80vh;
     .sponsor-a-child-section h3 {
         font-size: 1.5rem;
     }
-   .button{
-        text-align: center;
-    }
+  
 
 
 
@@ -2017,6 +2073,10 @@ min-height: 80vh;
         text-align: center;
     }
 
+    .top-nav-col{
+        text-align: center;
+    }
+
 }
 
 
@@ -2047,6 +2107,8 @@ min-height: 80vh;
 
     .top-nav-col {
         font-size: 12px;
+        text-align: center;
+    
     }
 
     .time-content h2 {
@@ -2069,9 +2131,6 @@ min-height: 80vh;
         font-size: 20px;
     }
 
-    .navigation-links{
-        overflow-y: scroll;
-    }
 
 }
 
@@ -2098,7 +2157,8 @@ min-height: 80vh;
     }
 
     .sponsor-a-child-content h3{
-        font-size: 18px;
+        text-align: center;
+        font-size: 1.3rem;
     }
 
     .banner-text h1, .news-heading-text h1{
@@ -2120,7 +2180,7 @@ min-height: 80vh;
 
 @media screen and (max-width: 300px) {
 .company-logo h3{
-    font-size: 12px;
+    font-size: 10px;
 }
 
 
