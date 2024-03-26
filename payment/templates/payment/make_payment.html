@@ -11,14 +11,18 @@
             <h1>Donate to save lives</h1>
         </div>
     </div>
-    <div class="donate-sec">
-        <h1>Make Payment for GH¢{{ payment.amount }}</h1>
-        <script src="https://js.paystack.co/v1/inline.js"></script>
+    <section class="donate-section-cont">
+    <div class="donate-secs">
+        <div class="donate-sec">
+            <h1>Make Payment for GH¢{{ payment.amount }}</h1>
+            <script src="https://js.paystack.co/v1/inline.js"></script>
+        </div>
+        <div>
+            <button class="donate-btn" onclick="payWithPayStack()" id="django-paystack-button" type="submit">Make
+                Payment</button>
+        </div>
     </div>
-    <div >
-        <button class="donate-btn" onclick="payWithPayStack()" id="django-paystack-button"
-            type="submit">Make Payment</button>
-    </div>
+    </section>
 </main>
 <!-- Footer section -->
 <script>
