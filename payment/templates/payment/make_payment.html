@@ -1,0 +1,48 @@
+{% extends 'foundation/base.html' %}
+{% load static %}
+{% block content %}
+
+<main>
+    <!-- Banner section -->
+    <div class="banner-section">
+        <!-- Banner image with alt attribute -->
+        <img src="{% static 'foundation/img/slideShow.jpg' %}" alt="Banner Image">
+        <div class="banner-text main">
+            <h1>Donate to save lives</h1>
+        </div>
+    </div>
+    <div class="donate-sec">
+        <h1>Make Payment for GH¢{{ payment.amount }}</h1>
+        <script src="https://js.paystack.co/v1/inline.js"></script>
+    </div>
+    <div >
+        <button class="donate-btn" onclick="payWithPayStack()" id="django-paystack-button"
+            type="submit">Make Payment</button>
+    </div>
+</main>
+<!-- Footer section -->
+<script>
+    function payWithPayStack() {
+        let currency = "GHS";
+        let plan = "";
+        let ref = "{{ payment.ref }}";
+        let obj = {
+            key: "{{ paystack_public_key }}",
+            email: "{{ payment.email }}",
+            amount: "{{ payment.amount_value }}",
+            ref: ref,
+            callback: function (response) {
+                window.location.href = "{% url 'verify-payment' payment.ref %}";
+            },
+        }
+        if (Boolean(currency)) {
+            obj.currency = currency.toUpperCase()
+        }
+        if (Boolean(plan)) {
+            obj.plan = plan;
+        }
+        var handler = PaystackPop.setup(obj);
+        handler.openIframe();
+    }
+</script>
+{% endblock content %}

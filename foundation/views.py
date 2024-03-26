@@ -131,12 +131,6 @@ def galleryDetail(request):
     return render(request, 'foundation/galleryDetail.html', context)
 
 
-def donate(request):
-
-    context = {
-        'title': 'Donate'
-    }
-    return render(request, 'foundation/donate.html', context)
 
 
 def ghProject(request):

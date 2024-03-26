@@ -13,29 +13,11 @@
         </div>
         <!-- Contact form section -->
         <section class="donate-section main">
-            <form method="">
-              <div class="donate-input">
-                <label for="">Name</label> <br>
-                <input type="text" required  autocomplete="on">
-              </div>
-              <div class="donate-input">
-                <label for="">Email</label> <br>
-                <input type="email" autocomplete="on">
-              </div>
-              <div class="donate-input">
-                <label for="">Amount</label> <br>
-                <input type="number" required autocomplete="on">
-              </div>
-              <div class="donate-input">
-                <label for="">Phone</label> <br>
-                <input type="tel" required autocomplete="on">
-              </div>
-              <div class="donate-input">
-                <label for="">Country</label> <br>
-                <input type="text" required autocomplete="on">
-              </div>
+          <form method="POST">
+            {% csrf_token %}
+            <h2 style="padding-bottom: 10px;">Using Mobile Money</h2>
+              {{ payment_form }}
               <button>Donate</button>
-               
             </form>
             <!-- Image in the contact form with alt attribute -->
             <div class="donate-form-img">
@@ -80,5 +62,4 @@
         </section>
     </main>
    <!-- Footer section -->
- 
    {% endblock content %}

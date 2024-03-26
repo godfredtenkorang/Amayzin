@@ -2134,3 +2134,17 @@ min-height: 80vh;
     
     
 }
+
+.donate-sec {
+    padding: 10px;
+    margin: 5px;
+    margin-top: 40px;
+
+}
+
+.donate-btn {
+    background-color: var(--main-Color);
+    padding: 10px;
+    margin: 5px;
+    color: var(--whiteColor);
+}
