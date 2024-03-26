@@ -3,31 +3,49 @@ from embed_video.fields import EmbedVideoField
 
 # Create your models here.
 
-class ProjectCategory(models.Model):
-    name = models.CharField(max_length=50)
-    project_title = models.CharField(max_length=250)
-    project_content = models.TextField()
-    home_content = models.TextField()
+
+class GhanaCategory(models.Model):
+    image = models.ImageField(upload_to='usproj-img')
+    title = models.CharField(max_length=250)
+    content = models.TextField()
     slug = models.SlugField(unique=True)
     date_added = models.DateTimeField('date published')
     
     class Meta:
-        verbose_name_plural = 'project categories'
+        verbose_name_plural = 'Ghana category'
         ordering = ['-date_added',]
 
     def __str__(self):
-        return self.name
+        return self.title
 
-class Project(models.Model):
-    main_category = models.ForeignKey(ProjectCategory, on_delete=models.CASCADE)
+class GhanaProject(models.Model):
+    category = models.ForeignKey(GhanaCategory, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='usproj-img')
-    slug = models.SlugField(unique=True)
-    date_added = models.DateTimeField(auto_now_add=True)
     
     class Meta:
-        verbose_name_plural = 'projects'
+        verbose_name_plural = 'ghana projects'
+    
+class USACategory(models.Model):
+    image = models.ImageField(upload_to='usproj-img')
+    title = models.CharField(max_length=250)
+    content = models.TextField()
+    slug = models.SlugField(unique=True)
+    date_added = models.DateTimeField('date published')
+    
+    class Meta:
+        verbose_name_plural = 'USA category'
         ordering = ['-date_added',]
         
+    def __str__(self):
+        return self.title
+
+class USAProject(models.Model):
+    category = models.ForeignKey(USACategory, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='usproj-img')
+    
+    class Meta:
+        verbose_name_plural = 'USA projects'
+
 
 class YouTube(models.Model):
     title = models.CharField(max_length=100)

@@ -1,0 +1,49 @@
+{% extends 'foundation/base.html' %}
+{% load static %}
+{% block content %}
+
+<main>
+    <!-- banner -->
+    <div class="banner-section">
+        <img src="{% static 'foundation/img/slideShow.jpg' %}" alt="">
+        <div class="banner-text main">
+            {% if main_category %}
+            <h1>{{ main_category }}</h1>
+            {% else %}
+            <h1>USA PROJECTS</h1>
+            {% endif %}
+        </div>
+    </div>
+    {% for category in categories %}
+    <!-- project section -->
+    <section class="project-section-container">
+        <div class="project-content-container">
+            <!-- project heading -->
+            <div class="project-heading">
+                <h2>{{ category.title }}</h2>
+            </div>
+            <!-- project details -->
+            <div class="prpject-details">
+                <p>{{ category.content }}</p>
+            </div>
+        </div>
+
+        <!-- project pictures -->
+        <div class="project-pictures ">
+            <!-- project image -->
+            <img src="{{ category.image.url }}" alt="Banner Image">
+
+            <div class="see-more-picturs">
+                <a href="{% url 'usaprojectPhotos' %}?category={{ category.title }}">See more photos</a>
+            </div>
+
+        </div>
+
+
+    </section>
+    {% endfor %}
+
+
+</main>
+
+{% endblock content %}

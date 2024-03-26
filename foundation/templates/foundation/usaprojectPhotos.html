@@ -1,0 +1,55 @@
+{% extends 'foundation/base.html' %}
+{% load static %}
+{% block content %}
+
+<main>
+    <!-- banner -->
+    <div class="banner-section">
+        <img src="{% static 'foundation/img/slideShow.jpg' %}" alt="">
+        <div class="banner-text main">
+            <h1>Project Photos</h1>
+        </div>
+    </div>
+
+
+    <section class="project-more-photos photo main">
+        {% for project in projects %}
+        <img src="{{ project.image.url }}" alt="photo">
+        {% endfor %}
+    </section>
+    <!-- Container for gallery pop-up functionality -->
+    <div class="gallery-pop-up-container">
+        <!-- Utility buttons for zooming and closing the pop-up -->
+        <div class="gallery-top-utility">
+            <div class="gallery-top-utility-col">
+                <!-- Zoom button -->
+                <p> <i class="fa fa-search-minus" id="zoomButton"></i></p>
+            </div>
+            <div class="gallery-top-utility-col">
+                <!-- Close button -->
+                <p><i class="fa fa-times" id="remove-popUp"></i></p>
+            </div>
+        </div>
+
+        <!-- Container for displaying the enlarged image and navigation buttons -->
+        <div class="pop-image-container">
+            <!-- Button for navigating to the previous image -->
+            <div class="previous-button">
+                <button id="prevButton"><i class="fa-solid fa-less-than"></i></button>
+            </div>
+            <!-- Container for the enlarged image -->
+            <div class="gallery-popUp-img">
+                <!-- Placeholder for the enlarged image -->
+                <img id="popUpImage" src="" alt="about image">
+            </div>
+            <!-- Button for navigating to the next image -->
+            <div class="next-Button">
+                <button id="nextButton"><i class="fa-solid fa-greater-than"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+{% endblock content %}
