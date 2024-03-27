@@ -50,7 +50,7 @@
 
     </div>
 
-    <form method="POST">
+    <form method="POST" id="form-payment">
       {% csrf_token %}
       <div class="donate-input">
         <label for="">Name</label> <br>
@@ -86,9 +86,23 @@
       </div>
       <button>Donate</button>
 
+
+
     </form>
+    
+    
+    
+    </div>
 
   </section>
+
+  <div class="submission-alert">
+    <div class="message">
+        <p>Submited successfully</p>
+    </div>
 </main>
+
+
 <!-- Footer section -->
 {% endblock content %}
+
