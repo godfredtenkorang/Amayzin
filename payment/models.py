@@ -44,3 +44,20 @@ class Payment(models.Model):
         if self.verified:
             return True
         return False
+    
+
+class PaymentOption(models.Model):
+    fullname = models.CharField(max_length=100)
+    user_email = models.EmailField()
+    user_amount = models.PositiveBigIntegerField()
+    user_phone = models.CharField(max_length=14, null=True)
+    payment_option = models.CharField(max_length=50, null=True)
+    user_country = models.CharField(max_length=14, null=True)
+    date_donated = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        verbose_name_plural = 'payment option'
+        ordering = ['-date_donated']
+    
+    def __str__(self):
+        return f"Payment: {self.user_amount}"
