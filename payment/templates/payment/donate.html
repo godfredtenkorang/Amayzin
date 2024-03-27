@@ -30,27 +30,56 @@
         <!-- Contact form section -->
         <section class="donate-section main">
  <!-- Image in the contact form with alt attribute -->
- <div class="donate-form-img">
-  <img src="{% static 'foundation/img/donate.jpg' %}" alt="Contact Form Image">
+ <div class="donate-account">
+  <p class="acount-text">Please choose a payment method from the options below for your payment method.</p>
+
+  <div class="account">
+    <h4>Paypal Account</h4>
+    <p> Amayzingracefdnint
+    </p>
+  </div>
+  <div class="account">
+    <h4>CashApp Account</h4>
+    <p>$Amayzingracefdn</p>
+  </div>
+  <div class="account">
+    <h4>Zelle Account</h4>
+    <p>Amazingg2018@yahoo.com or +1-518-518-7832
+    </p>
+  </div>
+
 </div>
 
             <form method="">
               <div class="donate-input">
                 <label for="">Name</label> <br>
-                <input type="text" required  autocomplete="on">
+                <input type="text" required  autocomplete="on" placeholder="Name">
               </div>
               <div class="donate-input">
                 <label for="">Email</label> <br>
-                <input type="email" autocomplete="on">
+                <input type="email" autocomplete="on" placeholder="Email">
               </div>
               <div class="donate-input">
                 <label for="">Amount</label> <br>
-                <input type="number" required autocomplete="on">
+                <input type="number" required autocomplete="on" placeholder="Amount">
               </div>
               <div class="donate-input">
                 <label for="">Phone</label> <br>
-                <input type="tel" required autocomplete="on">
+                <input type="tel" required autocomplete="on" placeholder="Phone Number">
               </div>
+
+              <div class="donate-input">
+                <label for="">Select payment method</label> <br>
+                <select name="" id="" >
+                  <option disabled selected  value="">Click and select payment method</option>
+                  <option value="PayPal"> PayPal</option>
+                  <option value="CashApp">CashApp</option>
+                  <option value="Zelle">Zelle</option>
+
+                </select>
+              </div>
+
+
               <div class="donate-input">
                 <label for="">Country</label> <br>
                 <input type="text" required autocomplete="on">
