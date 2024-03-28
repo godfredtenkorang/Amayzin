@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% if title %}
-        <title>Amazyn Grace Foundation Inc - {{ title }}</title>
+    <title>Amazyn Grace Foundation Inc - {{ title }}</title>
     {% else %}
-        <title>Amazyn Grace Foundation Inc</title>
+    <title>Amazyn Grace Foundation Inc</title>
     {% endif %}
 
     <meta name="description"
@@ -57,8 +57,9 @@
             <!-- Column for social media icons -->
             <div class="social-media">
                 <a href="https://web.facebook.com/amayzingracefdnint"><i class="fa-brands fa-facebook"></i></a>
-              
-                <a href=" https://www.tiktok.com/@amayzingracefdnintlinc?_t=8l1qoHJoRNj&_r=1 "><i class="fa-brands fa-tiktok"></i></a>
+
+                <a href=" https://www.tiktok.com/@amayzingracefdnintlinc?_t=8l1qoHJoRNj&_r=1 "><i
+                        class="fa-brands fa-tiktok"></i></a>
                 <a href="https://www.instagram.com/amayzingracefdn?igsh=MWt4NWUwaTlrMTNlYw=="><i
                         class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.youtube.com/@amayzingracefoundationintl3712"><i
@@ -75,7 +76,11 @@
                 <div class="company-logo">
                     <a href="{% url 'index' %}">
                         <img src="{% static 'foundation/img/company-logo.png' %}" alt="company logo">
-                        <h3>Amayzin Grace <br> Foundation Inc</h3>
+                        <span style="padding-left: 7px;">
+                            <h2>Amayzin Grace</h2>
+                            <h4>Foundation INC</h4>
+                        </span>
+
                     </a>
                 </div>
                 <!-- Navigation links and donate button -->
@@ -104,7 +109,8 @@
                             <li><a href="{% url 'getinvolve' %}">Get Involved</a></li>
                             <li><a href="{% url 'contact' %}">Contact</a></li>
                             <div class="donateBut">
-                                <li><a href="{% url 'donate' %}"><i class="fa-solid fa-circle-dollar-to-slot"></i> Donate
+                                <li><a href="{% url 'donate' %}"><i class="fa-solid fa-circle-dollar-to-slot"></i>
+                                        Donate
                                         Now</a></li>
                             </div>
                         </ul>
@@ -155,14 +161,15 @@
             <div class="footer-col footer-contact">
                 <h5>Contact Us</h5>
                 <p><span>Phone : </span> 1-518-818-7832 </p>
-                <p><span>Address :</span> 2 Mercer ave, Latham, NY 12110 
+                <p><span>Address :</span> 2 Mercer ave, Latham, NY 12110
                     United States
                 </p>
                 <p><span>Email:</span>: amazingg2018@yahoo.com
                 </p>
                 <div class="social-medias">
                     <a href="https://web.facebook.com/amayzingracefdnint"><i class="fa-brands fa-facebook"></i></a>
-                    <a href=" https://www.tiktok.com/@amayzingracefdnintlinc?_t=8l1qoHJoRNj&_r=1 "><i class="fa-brands fa-tiktok"></i></a>
+                    <a href=" https://www.tiktok.com/@amayzingracefdnintlinc?_t=8l1qoHJoRNj&_r=1 "><i
+                            class="fa-brands fa-tiktok"></i></a>
                     <a href="https://www.instagram.com/amayzingracefdn?igsh=MWt4NWUwaTlrMTNlYw=="><i
                             class="fa-brands fa-instagram"></i></a>
                     <a href="https://www.youtube.com/@amayzingracefoundationintl3712"><i
@@ -177,7 +184,7 @@
                 <li><a href="{% url 'sponsorship' %}">Sponsorship</a></li>
                 <li><a href="{% url 'getinvolve' %}">Get Involved</a></li>
                 <li><a href="{% url 'contact' %}">Contact</a></li>
-               
+
             </div>
         </div>
         <div class="copy-right-section">
